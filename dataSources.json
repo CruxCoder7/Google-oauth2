@@ -1,0 +1,1863 @@
+{
+  "data": {
+    "dataSource": [
+      {
+        "dataStreamId": "derived:com.google.active_minutes:com.google.android.fit:Xiaomi:Redmi Note 7:5833feed:top_level",
+        "dataStreamName": "top_level",
+        "type": "derived",
+        "dataType": {
+          "name": "com.google.active_minutes",
+          "field": [{ "name": "duration", "format": "integer" }]
+        },
+        "device": {
+          "uid": "5833feed",
+          "type": "phone",
+          "version": "",
+          "model": "Redmi Note 7",
+          "manufacturer": "Xiaomi"
+        },
+        "application": { "packageName": "com.google.android.fit" },
+        "dataQualityStandard": []
+      },
+      {
+        "dataStreamId": "derived:com.google.active_minutes:com.google.android.gms:merge_active_minutes",
+        "dataStreamName": "merge_active_minutes",
+        "type": "derived",
+        "dataType": {
+          "name": "com.google.active_minutes",
+          "field": [{ "name": "duration", "format": "integer" }]
+        },
+        "application": { "packageName": "com.google.android.gms" },
+        "dataQualityStandard": []
+      },
+      {
+        "dataStreamId": "derived:com.google.active_minutes:com.google.fitkit:apple:iphone:93564341:top_level",
+        "dataStreamName": "top_level",
+        "type": "derived",
+        "dataType": {
+          "name": "com.google.active_minutes",
+          "field": [{ "name": "duration", "format": "integer" }]
+        },
+        "device": {
+          "uid": "93564341",
+          "type": "phone",
+          "model": "iphone",
+          "manufacturer": "apple"
+        },
+        "application": {
+          "packageName": "com.google.fitkit",
+          "version": "",
+          "detailsUrl": ""
+        },
+        "dataQualityStandard": []
+      },
+      {
+        "dataStreamId": "derived:com.google.active_minutes:com.google.ios.fit:appleinc.:iphone:b720d6db:top_level",
+        "dataStreamName": "top_level",
+        "type": "derived",
+        "dataType": {
+          "name": "com.google.active_minutes",
+          "field": [{ "name": "duration", "format": "integer" }]
+        },
+        "device": {
+          "uid": "b720d6db",
+          "type": "phone",
+          "model": "iphone",
+          "manufacturer": "appleinc."
+        },
+        "application": {
+          "packageName": "com.google.ios.fit",
+          "version": "",
+          "detailsUrl": ""
+        },
+        "dataQualityStandard": []
+      },
+      {
+        "dataStreamId": "derived:com.google.activity.segment:com.google.android.apps.fitness:Xiaomi:Redmi Note 7:5833feed:session_activity_segment",
+        "dataStreamName": "session_activity_segment",
+        "type": "derived",
+        "dataType": {
+          "name": "com.google.activity.segment",
+          "field": [{ "name": "activity", "format": "integer" }]
+        },
+        "device": {
+          "uid": "5833feed",
+          "type": "phone",
+          "version": "",
+          "model": "Redmi Note 7",
+          "manufacturer": "Xiaomi"
+        },
+        "application": { "packageName": "com.google.android.apps.fitness" },
+        "dataQualityStandard": []
+      },
+      {
+        "dataStreamId": "derived:com.google.activity.segment:com.google.android.apps.fitness:Xiaomi:Redmi Note 7:403d77b0:session_activity_segment",
+        "dataStreamName": "session_activity_segment",
+        "type": "derived",
+        "dataType": {
+          "name": "com.google.activity.segment",
+          "field": [{ "name": "activity", "format": "integer" }]
+        },
+        "device": {
+          "uid": "403d77b0",
+          "type": "phone",
+          "version": "",
+          "model": "Redmi Note 7",
+          "manufacturer": "Xiaomi"
+        },
+        "application": { "packageName": "com.google.android.apps.fitness" },
+        "dataQualityStandard": []
+      },
+      {
+        "dataStreamId": "derived:com.google.activity.segment:com.google.android.apps.fitness:session_activity_segment",
+        "dataStreamName": "session_activity_segment",
+        "type": "derived",
+        "dataType": {
+          "name": "com.google.activity.segment",
+          "field": [{ "name": "activity", "format": "integer" }]
+        },
+        "application": { "packageName": "com.google.android.apps.fitness" },
+        "dataQualityStandard": []
+      },
+      {
+        "dataStreamId": "derived:com.google.activity.segment:com.google.android.fit:Xiaomi:Redmi Note 7:5833feed:top_level",
+        "dataStreamName": "top_level",
+        "type": "derived",
+        "dataType": {
+          "name": "com.google.activity.segment",
+          "field": [{ "name": "activity", "format": "integer" }]
+        },
+        "device": {
+          "uid": "5833feed",
+          "type": "phone",
+          "version": "",
+          "model": "Redmi Note 7",
+          "manufacturer": "Xiaomi"
+        },
+        "application": { "packageName": "com.google.android.fit" },
+        "dataQualityStandard": []
+      },
+      {
+        "dataStreamId": "derived:com.google.activity.segment:com.google.android.gms:Xiaomi:Redmi Note 7:5833feed:activity_from_steps",
+        "dataStreamName": "activity_from_steps",
+        "type": "derived",
+        "dataType": {
+          "name": "com.google.activity.segment",
+          "field": [{ "name": "activity", "format": "integer" }]
+        },
+        "device": {
+          "uid": "5833feed",
+          "type": "phone",
+          "version": "",
+          "model": "Redmi Note 7",
+          "manufacturer": "Xiaomi"
+        },
+        "application": { "packageName": "com.google.android.gms" },
+        "dataQualityStandard": []
+      },
+      {
+        "dataStreamId": "derived:com.google.activity.segment:com.google.android.gms:Xiaomi:Redmi Note 7:5833feed:from_activity_samples<-derived:com.google.activity.samples:com.google.android.gms:Xiaomi:Redmi Note 7:5833feed:detailed",
+        "dataStreamName": "from_activity_samples<-derived:com.google.activity.samples:com.google.android.gms:Xiaomi:Redmi Note 7:5833feed:detailed",
+        "type": "derived",
+        "dataType": {
+          "name": "com.google.activity.segment",
+          "field": [{ "name": "activity", "format": "integer" }]
+        },
+        "device": {
+          "uid": "5833feed",
+          "type": "phone",
+          "version": "",
+          "model": "Redmi Note 7",
+          "manufacturer": "Xiaomi"
+        },
+        "application": { "packageName": "com.google.android.gms" },
+        "dataQualityStandard": []
+      },
+      {
+        "dataStreamId": "derived:com.google.activity.segment:com.google.android.gms:Xiaomi:Redmi Note 7:5e2a8d75:activity_from_steps",
+        "dataStreamName": "activity_from_steps",
+        "type": "derived",
+        "dataType": {
+          "name": "com.google.activity.segment",
+          "field": [{ "name": "activity", "format": "integer" }]
+        },
+        "device": {
+          "uid": "5e2a8d75",
+          "type": "phone",
+          "version": "",
+          "model": "Redmi Note 7",
+          "manufacturer": "Xiaomi"
+        },
+        "application": { "packageName": "com.google.android.gms" },
+        "dataQualityStandard": []
+      },
+      {
+        "dataStreamId": "derived:com.google.activity.segment:com.google.android.gms:Xiaomi:Redmi Note 7:5e2a8d75:from_activity_samples<-derived:com.google.activity.samples:com.google.android.gms:Xiaomi:Redmi Note 7:5e2a8d75:detailed",
+        "dataStreamName": "from_activity_samples<-derived:com.google.activity.samples:com.google.android.gms:Xiaomi:Redmi Note 7:5e2a8d75:detailed",
+        "type": "derived",
+        "dataType": {
+          "name": "com.google.activity.segment",
+          "field": [{ "name": "activity", "format": "integer" }]
+        },
+        "device": {
+          "uid": "5e2a8d75",
+          "type": "phone",
+          "version": "",
+          "model": "Redmi Note 7",
+          "manufacturer": "Xiaomi"
+        },
+        "application": { "packageName": "com.google.android.gms" },
+        "dataQualityStandard": []
+      },
+      {
+        "dataStreamId": "derived:com.google.activity.segment:com.google.android.gms:Xiaomi:Redmi Note 7:403d77b0:activity_from_steps",
+        "dataStreamName": "activity_from_steps",
+        "type": "derived",
+        "dataType": {
+          "name": "com.google.activity.segment",
+          "field": [{ "name": "activity", "format": "integer" }]
+        },
+        "device": {
+          "uid": "403d77b0",
+          "type": "phone",
+          "version": "",
+          "model": "Redmi Note 7",
+          "manufacturer": "Xiaomi"
+        },
+        "application": { "packageName": "com.google.android.gms" },
+        "dataQualityStandard": []
+      },
+      {
+        "dataStreamId": "derived:com.google.activity.segment:com.google.android.gms:Xiaomi:Redmi Note 7:403d77b0:from_activity_samples<-derived:com.google.activity.samples:com.google.android.gms:Xiaomi:Redmi Note 7:403d77b0:detailed",
+        "dataStreamName": "from_activity_samples<-derived:com.google.activity.samples:com.google.android.gms:Xiaomi:Redmi Note 7:403d77b0:detailed",
+        "type": "derived",
+        "dataType": {
+          "name": "com.google.activity.segment",
+          "field": [{ "name": "activity", "format": "integer" }]
+        },
+        "device": {
+          "uid": "403d77b0",
+          "type": "phone",
+          "version": "",
+          "model": "Redmi Note 7",
+          "manufacturer": "Xiaomi"
+        },
+        "application": { "packageName": "com.google.android.gms" },
+        "dataQualityStandard": []
+      },
+      {
+        "dataStreamId": "derived:com.google.activity.segment:com.google.android.gms:merge_activity_segments",
+        "dataStreamName": "merge_activity_segments",
+        "type": "derived",
+        "dataType": {
+          "name": "com.google.activity.segment",
+          "field": [{ "name": "activity", "format": "integer" }]
+        },
+        "application": { "packageName": "com.google.android.gms" },
+        "dataQualityStandard": []
+      },
+      {
+        "dataStreamId": "derived:com.google.activity.segment:com.google.android.gms:merge_activity_segments_local",
+        "dataStreamName": "merge_activity_segments_local",
+        "type": "derived",
+        "dataType": {
+          "name": "com.google.activity.segment",
+          "field": [{ "name": "activity", "format": "integer" }]
+        },
+        "application": { "packageName": "com.google.android.gms" },
+        "dataQualityStandard": []
+      },
+      {
+        "dataStreamId": "derived:com.google.activity.segment:com.google.android.gms:session_activity_segment",
+        "dataStreamName": "session_activity_segment",
+        "type": "derived",
+        "dataType": {
+          "name": "com.google.activity.segment",
+          "field": [{ "name": "activity", "format": "integer" }]
+        },
+        "application": { "packageName": "com.google.android.gms" },
+        "dataQualityStandard": []
+      },
+      {
+        "dataStreamId": "derived:com.google.activity.segment:com.google.ios.fit:appleinc.:iphone:b720d6db:top_level",
+        "dataStreamName": "top_level",
+        "type": "derived",
+        "dataType": {
+          "name": "com.google.activity.segment",
+          "field": [{ "name": "activity", "format": "integer" }]
+        },
+        "device": {
+          "uid": "b720d6db",
+          "type": "phone",
+          "model": "iphone",
+          "manufacturer": "appleinc."
+        },
+        "application": {
+          "packageName": "com.google.ios.fit",
+          "version": "",
+          "detailsUrl": ""
+        },
+        "dataQualityStandard": []
+      },
+      {
+        "dataStreamId": "derived:com.google.activity.segment:com.huami.watch.hmwatchmanager:session_activity_segment",
+        "dataStreamName": "session_activity_segment",
+        "type": "derived",
+        "dataType": {
+          "name": "com.google.activity.segment",
+          "field": [{ "name": "activity", "format": "integer" }]
+        },
+        "application": { "packageName": "com.huami.watch.hmwatchmanager" },
+        "dataQualityStandard": []
+      },
+      {
+        "dataStreamId": "derived:com.google.activity.segment:menloseweight.loseweightappformen.weightlossformen:session_activity_segment",
+        "dataStreamName": "session_activity_segment",
+        "type": "derived",
+        "dataType": {
+          "name": "com.google.activity.segment",
+          "field": [{ "name": "activity", "format": "integer" }]
+        },
+        "application": {
+          "packageName": "menloseweight.loseweightappformen.weightlossformen"
+        },
+        "dataQualityStandard": []
+      },
+      {
+        "dataStreamId": "derived:com.google.calories.bmr:com.google.android.gms:merged",
+        "dataStreamName": "merged",
+        "type": "derived",
+        "dataType": {
+          "name": "com.google.calories.bmr",
+          "field": [{ "name": "calories", "format": "floatPoint" }]
+        },
+        "application": { "packageName": "com.google.android.gms" },
+        "dataQualityStandard": []
+      },
+      {
+        "dataStreamId": "derived:com.google.calories.expended:com.google.android.fit:Xiaomi:Redmi Note 7:5833feed:top_level",
+        "dataStreamName": "top_level",
+        "type": "derived",
+        "dataType": {
+          "name": "com.google.calories.expended",
+          "field": [{ "name": "calories", "format": "floatPoint" }]
+        },
+        "device": {
+          "uid": "5833feed",
+          "type": "phone",
+          "version": "",
+          "model": "Redmi Note 7",
+          "manufacturer": "Xiaomi"
+        },
+        "application": { "packageName": "com.google.android.fit" },
+        "dataQualityStandard": []
+      },
+      {
+        "dataStreamId": "derived:com.google.calories.expended:com.google.android.gms:merge_calories_expended",
+        "dataStreamName": "merge_calories_expended",
+        "type": "derived",
+        "dataType": {
+          "name": "com.google.calories.expended",
+          "field": [{ "name": "calories", "format": "floatPoint" }]
+        },
+        "application": { "packageName": "com.google.android.gms" },
+        "dataQualityStandard": []
+      },
+      {
+        "dataStreamId": "derived:com.google.calories.expended:com.google.ios.fit:appleinc.:iphone:b720d6db:top_level",
+        "dataStreamName": "top_level",
+        "type": "derived",
+        "dataType": {
+          "name": "com.google.calories.expended",
+          "field": [{ "name": "calories", "format": "floatPoint" }]
+        },
+        "device": {
+          "uid": "b720d6db",
+          "type": "phone",
+          "model": "iphone",
+          "manufacturer": "appleinc."
+        },
+        "application": {
+          "packageName": "com.google.ios.fit",
+          "version": "",
+          "detailsUrl": ""
+        },
+        "dataQualityStandard": []
+      },
+      {
+        "dataStreamId": "derived:com.google.distance.delta:com.google.android.fit:Xiaomi:Redmi Note 7:5833feed:top_level",
+        "dataStreamName": "top_level",
+        "type": "derived",
+        "dataType": {
+          "name": "com.google.distance.delta",
+          "field": [{ "name": "distance", "format": "floatPoint" }]
+        },
+        "device": {
+          "uid": "5833feed",
+          "type": "phone",
+          "version": "",
+          "model": "Redmi Note 7",
+          "manufacturer": "Xiaomi"
+        },
+        "application": { "packageName": "com.google.android.fit" },
+        "dataQualityStandard": []
+      },
+      {
+        "dataStreamId": "derived:com.google.distance.delta:com.google.android.gms:Xiaomi:Redmi Note 7:5833feed:from_activity<-raw:com.google.location.sample:com.google.android.gms:Xiaomi:Redmi Note 7:5833feed:live_location",
+        "dataStreamName": "from_activity<-raw:com.google.location.sample:com.google.android.gms:Xiaomi:Redmi Note 7:5833feed:live_location",
+        "type": "derived",
+        "dataType": {
+          "name": "com.google.distance.delta",
+          "field": [{ "name": "distance", "format": "floatPoint" }]
+        },
+        "device": {
+          "uid": "5833feed",
+          "type": "phone",
+          "version": "",
+          "model": "Redmi Note 7",
+          "manufacturer": "Xiaomi"
+        },
+        "application": { "packageName": "com.google.android.gms" },
+        "dataQualityStandard": []
+      },
+      {
+        "dataStreamId": "derived:com.google.distance.delta:com.google.android.gms:Xiaomi:Redmi Note 7:5833feed:from_location<-raw:com.google.location.sample:com.google.android.gms:Xiaomi:Redmi Note 7:5833feed:live_location",
+        "dataStreamName": "from_location<-raw:com.google.location.sample:com.google.android.gms:Xiaomi:Redmi Note 7:5833feed:live_location",
+        "type": "derived",
+        "dataType": {
+          "name": "com.google.distance.delta",
+          "field": [{ "name": "distance", "format": "floatPoint" }]
+        },
+        "device": {
+          "uid": "5833feed",
+          "type": "phone",
+          "version": "",
+          "model": "Redmi Note 7",
+          "manufacturer": "Xiaomi"
+        },
+        "application": { "packageName": "com.google.android.gms" },
+        "dataQualityStandard": []
+      },
+      {
+        "dataStreamId": "derived:com.google.distance.delta:com.google.android.gms:Xiaomi:Redmi Note 7:403d77b0:from_activity<-raw:com.google.location.sample:com.google.android.gms:Xiaomi:Redmi Note 7:403d77b0:live_location",
+        "dataStreamName": "from_activity<-raw:com.google.location.sample:com.google.android.gms:Xiaomi:Redmi Note 7:403d77b0:live_location",
+        "type": "derived",
+        "dataType": {
+          "name": "com.google.distance.delta",
+          "field": [{ "name": "distance", "format": "floatPoint" }]
+        },
+        "device": {
+          "uid": "403d77b0",
+          "type": "phone",
+          "version": "",
+          "model": "Redmi Note 7",
+          "manufacturer": "Xiaomi"
+        },
+        "application": { "packageName": "com.google.android.gms" },
+        "dataQualityStandard": []
+      },
+      {
+        "dataStreamId": "derived:com.google.distance.delta:com.google.android.gms:Xiaomi:Redmi Note 7:403d77b0:from_location<-raw:com.google.location.sample:com.google.android.gms:Xiaomi:Redmi Note 7:403d77b0:live_location",
+        "dataStreamName": "from_location<-raw:com.google.location.sample:com.google.android.gms:Xiaomi:Redmi Note 7:403d77b0:live_location",
+        "type": "derived",
+        "dataType": {
+          "name": "com.google.distance.delta",
+          "field": [{ "name": "distance", "format": "floatPoint" }]
+        },
+        "device": {
+          "uid": "403d77b0",
+          "type": "phone",
+          "version": "",
+          "model": "Redmi Note 7",
+          "manufacturer": "Xiaomi"
+        },
+        "application": { "packageName": "com.google.android.gms" },
+        "dataQualityStandard": []
+      },
+      {
+        "dataStreamId": "derived:com.google.distance.delta:com.google.android.gms:from_high_accuracy_location<-derived:com.google.location.sample:com.google.android.gms:merge_high_fidelity",
+        "dataStreamName": "from_high_accuracy_location<-derived:com.google.location.sample:com.google.android.gms:merge_high_fidelity",
+        "type": "derived",
+        "dataType": {
+          "name": "com.google.distance.delta",
+          "field": [{ "name": "distance", "format": "floatPoint" }]
+        },
+        "application": { "packageName": "com.google.android.gms" },
+        "dataQualityStandard": []
+      },
+      {
+        "dataStreamId": "derived:com.google.distance.delta:com.google.android.gms:merge_distance_delta",
+        "dataStreamName": "merge_distance_delta",
+        "type": "derived",
+        "dataType": {
+          "name": "com.google.distance.delta",
+          "field": [{ "name": "distance", "format": "floatPoint" }]
+        },
+        "application": { "packageName": "com.google.android.gms" },
+        "dataQualityStandard": []
+      },
+      {
+        "dataStreamId": "derived:com.google.distance.delta:com.google.ios.fit:appleinc.:iphone:b720d6db:top_level",
+        "dataStreamName": "top_level",
+        "type": "derived",
+        "dataType": {
+          "name": "com.google.distance.delta",
+          "field": [{ "name": "distance", "format": "floatPoint" }]
+        },
+        "device": {
+          "uid": "b720d6db",
+          "type": "phone",
+          "model": "iphone",
+          "manufacturer": "appleinc."
+        },
+        "application": {
+          "packageName": "com.google.ios.fit",
+          "version": "",
+          "detailsUrl": ""
+        },
+        "dataQualityStandard": []
+      },
+      {
+        "dataStreamId": "derived:com.google.heart_minutes:com.google.android.fit:Xiaomi:Redmi Note 7:5833feed:top_level",
+        "dataStreamName": "top_level",
+        "type": "derived",
+        "dataType": {
+          "name": "com.google.heart_minutes",
+          "field": [{ "name": "intensity", "format": "floatPoint" }]
+        },
+        "device": {
+          "uid": "5833feed",
+          "type": "phone",
+          "version": "",
+          "model": "Redmi Note 7",
+          "manufacturer": "Xiaomi"
+        },
+        "application": { "packageName": "com.google.android.fit" },
+        "dataQualityStandard": []
+      },
+      {
+        "dataStreamId": "derived:com.google.heart_minutes:com.google.android.gms:from_heart_rate<-merge_heart_rate_bpm",
+        "dataStreamName": "from_heart_rate<-merge_heart_rate_bpm",
+        "type": "derived",
+        "dataType": {
+          "name": "com.google.heart_minutes",
+          "field": [{ "name": "intensity", "format": "floatPoint" }]
+        },
+        "application": { "packageName": "com.google.android.gms" },
+        "dataQualityStandard": []
+      },
+      {
+        "dataStreamId": "derived:com.google.heart_minutes:com.google.android.gms:merge_heart_minutes",
+        "dataStreamName": "merge_heart_minutes",
+        "type": "derived",
+        "dataType": {
+          "name": "com.google.heart_minutes",
+          "field": [{ "name": "intensity", "format": "floatPoint" }]
+        },
+        "application": { "packageName": "com.google.android.gms" },
+        "dataQualityStandard": []
+      },
+      {
+        "dataStreamId": "derived:com.google.heart_minutes:com.google.fitkit:apple:iphone:93564341:top_level",
+        "dataStreamName": "top_level",
+        "type": "derived",
+        "dataType": {
+          "name": "com.google.heart_minutes",
+          "field": [{ "name": "intensity", "format": "floatPoint" }]
+        },
+        "device": {
+          "uid": "93564341",
+          "type": "phone",
+          "model": "iphone",
+          "manufacturer": "apple"
+        },
+        "application": {
+          "packageName": "com.google.fitkit",
+          "version": "",
+          "detailsUrl": ""
+        },
+        "dataQualityStandard": []
+      },
+      {
+        "dataStreamId": "derived:com.google.heart_minutes:com.google.ios.fit:appleinc.:iphone:b720d6db:top_level",
+        "dataStreamName": "top_level",
+        "type": "derived",
+        "dataType": {
+          "name": "com.google.heart_minutes",
+          "field": [{ "name": "intensity", "format": "floatPoint" }]
+        },
+        "device": {
+          "uid": "b720d6db",
+          "type": "phone",
+          "model": "iphone",
+          "manufacturer": "appleinc."
+        },
+        "application": {
+          "packageName": "com.google.ios.fit",
+          "version": "",
+          "detailsUrl": ""
+        },
+        "dataQualityStandard": []
+      },
+      {
+        "dataStreamId": "derived:com.google.speed:com.google.android.fit:Xiaomi:Redmi Note 7:5833feed:top_level",
+        "dataStreamName": "top_level",
+        "type": "derived",
+        "dataType": {
+          "name": "com.google.speed",
+          "field": [{ "name": "speed", "format": "floatPoint" }]
+        },
+        "device": {
+          "uid": "5833feed",
+          "type": "phone",
+          "version": "",
+          "model": "Redmi Note 7",
+          "manufacturer": "Xiaomi"
+        },
+        "application": { "packageName": "com.google.android.fit" },
+        "dataQualityStandard": []
+      },
+      {
+        "dataStreamId": "derived:com.google.speed:com.google.android.gms:merge_speed",
+        "dataStreamName": "merge_speed",
+        "type": "derived",
+        "dataType": {
+          "name": "com.google.speed",
+          "field": [{ "name": "speed", "format": "floatPoint" }]
+        },
+        "application": { "packageName": "com.google.android.gms" },
+        "dataQualityStandard": []
+      },
+      {
+        "dataStreamId": "derived:com.google.speed:com.google.ios.fit:appleinc.:iphone:b720d6db:top_level",
+        "dataStreamName": "top_level",
+        "type": "derived",
+        "dataType": {
+          "name": "com.google.speed",
+          "field": [{ "name": "speed", "format": "floatPoint" }]
+        },
+        "device": {
+          "uid": "b720d6db",
+          "type": "phone",
+          "model": "iphone",
+          "manufacturer": "appleinc."
+        },
+        "application": {
+          "packageName": "com.google.ios.fit",
+          "version": "",
+          "detailsUrl": ""
+        },
+        "dataQualityStandard": []
+      },
+      {
+        "dataStreamId": "derived:com.google.step_count.delta:586194342035:Sameer Khan:New:1000001:MyStepSource2",
+        "dataStreamName": "MyStepSource2",
+        "type": "derived",
+        "dataType": {
+          "name": "com.google.step_count.delta",
+          "field": [{ "name": "steps", "format": "integer" }]
+        },
+        "device": {
+          "uid": "1000001",
+          "type": "tablet",
+          "version": "1.0",
+          "model": "New",
+          "manufacturer": "Sameer Khan"
+        },
+        "application": {
+          "version": "1",
+          "detailsUrl": "http://example.com",
+          "name": "Foo Example App"
+        },
+        "dataQualityStandard": []
+      },
+      {
+        "dataStreamId": "derived:com.google.step_count.delta:com.google.android.fit:Xiaomi:Redmi Note 7:5833feed:top_level",
+        "dataStreamName": "top_level",
+        "type": "derived",
+        "dataType": {
+          "name": "com.google.step_count.delta",
+          "field": [{ "name": "steps", "format": "integer" }]
+        },
+        "device": {
+          "uid": "5833feed",
+          "type": "phone",
+          "version": "",
+          "model": "Redmi Note 7",
+          "manufacturer": "Xiaomi"
+        },
+        "application": { "packageName": "com.google.android.fit" },
+        "dataQualityStandard": []
+      },
+      {
+        "dataStreamId": "derived:com.google.step_count.delta:com.google.android.gms:Xiaomi:Redmi Note 7:5833feed:derive_step_deltas<-raw:com.google.step_count.cumulative:Xiaomi:Redmi Note 7:5833feed:Step Counter",
+        "dataStreamName": "derive_step_deltas<-raw:com.google.step_count.cumulative:Xiaomi:Redmi Note 7:5833feed:Step Counter",
+        "type": "derived",
+        "dataType": {
+          "name": "com.google.step_count.delta",
+          "field": [{ "name": "steps", "format": "integer" }]
+        },
+        "device": {
+          "uid": "5833feed",
+          "type": "phone",
+          "version": "",
+          "model": "Redmi Note 7",
+          "manufacturer": "Xiaomi"
+        },
+        "application": { "packageName": "com.google.android.gms" },
+        "dataQualityStandard": []
+      },
+      {
+        "dataStreamId": "derived:com.google.step_count.delta:com.google.android.gms:Xiaomi:Redmi Note 7:5e2a8d75:derive_step_deltas<-raw:com.google.step_count.cumulative:Xiaomi:Redmi Note 7:5e2a8d75:Step Counter",
+        "dataStreamName": "derive_step_deltas<-raw:com.google.step_count.cumulative:Xiaomi:Redmi Note 7:5e2a8d75:Step Counter",
+        "type": "derived",
+        "dataType": {
+          "name": "com.google.step_count.delta",
+          "field": [{ "name": "steps", "format": "integer" }]
+        },
+        "device": {
+          "uid": "5e2a8d75",
+          "type": "phone",
+          "version": "",
+          "model": "Redmi Note 7",
+          "manufacturer": "Xiaomi"
+        },
+        "application": { "packageName": "com.google.android.gms" },
+        "dataQualityStandard": []
+      },
+      {
+        "dataStreamId": "derived:com.google.step_count.delta:com.google.android.gms:Xiaomi:Redmi Note 7:403d77b0:derive_step_deltas<-raw:com.google.step_count.cumulative:Xiaomi:Redmi Note 7:403d77b0:Step Counter",
+        "dataStreamName": "derive_step_deltas<-raw:com.google.step_count.cumulative:Xiaomi:Redmi Note 7:403d77b0:Step Counter",
+        "type": "derived",
+        "dataType": {
+          "name": "com.google.step_count.delta",
+          "field": [{ "name": "steps", "format": "integer" }]
+        },
+        "device": {
+          "uid": "403d77b0",
+          "type": "phone",
+          "version": "",
+          "model": "Redmi Note 7",
+          "manufacturer": "Xiaomi"
+        },
+        "application": { "packageName": "com.google.android.gms" },
+        "dataQualityStandard": []
+      },
+      {
+        "dataStreamId": "derived:com.google.step_count.delta:com.google.android.gms:estimated_steps",
+        "dataStreamName": "estimated_steps",
+        "type": "derived",
+        "dataType": {
+          "name": "com.google.step_count.delta",
+          "field": [{ "name": "steps", "format": "integer" }]
+        },
+        "application": { "packageName": "com.google.android.gms" },
+        "dataQualityStandard": []
+      },
+      {
+        "dataStreamId": "derived:com.google.step_count.delta:com.google.android.gms:merge_step_deltas",
+        "dataStreamName": "merge_step_deltas",
+        "type": "derived",
+        "dataType": {
+          "name": "com.google.step_count.delta",
+          "field": [{ "name": "steps", "format": "integer" }]
+        },
+        "application": { "packageName": "com.google.android.gms" },
+        "dataQualityStandard": []
+      },
+      {
+        "dataStreamId": "derived:com.google.step_count.delta:com.google.fitkit:apple:iphone:93564341:top_level",
+        "dataStreamName": "top_level",
+        "type": "derived",
+        "dataType": {
+          "name": "com.google.step_count.delta",
+          "field": [{ "name": "steps", "format": "integer" }]
+        },
+        "device": {
+          "uid": "93564341",
+          "type": "phone",
+          "model": "iphone",
+          "manufacturer": "apple"
+        },
+        "application": {
+          "packageName": "com.google.fitkit",
+          "version": "",
+          "detailsUrl": ""
+        },
+        "dataQualityStandard": []
+      },
+      {
+        "dataStreamId": "derived:com.google.step_count.delta:com.google.ios.fit:appleinc.:iphone:b720d6db:top_level",
+        "dataStreamName": "top_level",
+        "type": "derived",
+        "dataType": {
+          "name": "com.google.step_count.delta",
+          "field": [{ "name": "steps", "format": "integer" }]
+        },
+        "device": {
+          "uid": "b720d6db",
+          "type": "phone",
+          "model": "iphone",
+          "manufacturer": "appleinc."
+        },
+        "application": {
+          "packageName": "com.google.ios.fit",
+          "version": "",
+          "detailsUrl": ""
+        },
+        "dataQualityStandard": []
+      },
+      {
+        "dataStreamId": "raw:com.google.active_minutes:com.google.android.apps.fitness:user_input",
+        "dataStreamName": "user_input",
+        "type": "raw",
+        "dataType": {
+          "name": "com.google.active_minutes",
+          "field": [{ "name": "duration", "format": "integer" }]
+        },
+        "application": { "packageName": "com.google.android.apps.fitness" },
+        "dataQualityStandard": []
+      },
+      {
+        "dataStreamId": "raw:com.google.activity.segment:com.google.android.apps.fitness:user_input",
+        "dataStreamName": "user_input",
+        "type": "raw",
+        "dataType": {
+          "name": "com.google.activity.segment",
+          "field": [{ "name": "activity", "format": "integer" }]
+        },
+        "application": { "packageName": "com.google.android.apps.fitness" },
+        "dataQualityStandard": []
+      },
+      {
+        "dataStreamId": "raw:com.google.activity.segment:com.huami.watch.hmwatchmanager:GoogleFitSyncHelper- steps segments0",
+        "dataStreamName": "GoogleFitSyncHelper- steps segments0",
+        "type": "raw",
+        "dataType": {
+          "name": "com.google.activity.segment",
+          "field": [{ "name": "activity", "format": "integer" }]
+        },
+        "application": { "packageName": "com.huami.watch.hmwatchmanager" },
+        "dataQualityStandard": []
+      },
+      {
+        "dataStreamId": "raw:com.google.activity.segment:com.huami.watch.hmwatchmanager:GoogleFitSyncHelper- steps segments1",
+        "dataStreamName": "GoogleFitSyncHelper- steps segments1",
+        "type": "raw",
+        "dataType": {
+          "name": "com.google.activity.segment",
+          "field": [{ "name": "activity", "format": "integer" }]
+        },
+        "application": { "packageName": "com.huami.watch.hmwatchmanager" },
+        "dataQualityStandard": []
+      },
+      {
+        "dataStreamId": "raw:com.google.activity.segment:com.huami.watch.hmwatchmanager:GoogleFitSyncHelper- steps segments10",
+        "dataStreamName": "GoogleFitSyncHelper- steps segments10",
+        "type": "raw",
+        "dataType": {
+          "name": "com.google.activity.segment",
+          "field": [{ "name": "activity", "format": "integer" }]
+        },
+        "application": { "packageName": "com.huami.watch.hmwatchmanager" },
+        "dataQualityStandard": []
+      },
+      {
+        "dataStreamId": "raw:com.google.activity.segment:com.huami.watch.hmwatchmanager:GoogleFitSyncHelper- steps segments11",
+        "dataStreamName": "GoogleFitSyncHelper- steps segments11",
+        "type": "raw",
+        "dataType": {
+          "name": "com.google.activity.segment",
+          "field": [{ "name": "activity", "format": "integer" }]
+        },
+        "application": { "packageName": "com.huami.watch.hmwatchmanager" },
+        "dataQualityStandard": []
+      },
+      {
+        "dataStreamId": "raw:com.google.activity.segment:com.huami.watch.hmwatchmanager:GoogleFitSyncHelper- steps segments12",
+        "dataStreamName": "GoogleFitSyncHelper- steps segments12",
+        "type": "raw",
+        "dataType": {
+          "name": "com.google.activity.segment",
+          "field": [{ "name": "activity", "format": "integer" }]
+        },
+        "application": { "packageName": "com.huami.watch.hmwatchmanager" },
+        "dataQualityStandard": []
+      },
+      {
+        "dataStreamId": "raw:com.google.activity.segment:com.huami.watch.hmwatchmanager:GoogleFitSyncHelper- steps segments13",
+        "dataStreamName": "GoogleFitSyncHelper- steps segments13",
+        "type": "raw",
+        "dataType": {
+          "name": "com.google.activity.segment",
+          "field": [{ "name": "activity", "format": "integer" }]
+        },
+        "application": { "packageName": "com.huami.watch.hmwatchmanager" },
+        "dataQualityStandard": []
+      },
+      {
+        "dataStreamId": "raw:com.google.activity.segment:com.huami.watch.hmwatchmanager:GoogleFitSyncHelper- steps segments14",
+        "dataStreamName": "GoogleFitSyncHelper- steps segments14",
+        "type": "raw",
+        "dataType": {
+          "name": "com.google.activity.segment",
+          "field": [{ "name": "activity", "format": "integer" }]
+        },
+        "application": { "packageName": "com.huami.watch.hmwatchmanager" },
+        "dataQualityStandard": []
+      },
+      {
+        "dataStreamId": "raw:com.google.activity.segment:com.huami.watch.hmwatchmanager:GoogleFitSyncHelper- steps segments15",
+        "dataStreamName": "GoogleFitSyncHelper- steps segments15",
+        "type": "raw",
+        "dataType": {
+          "name": "com.google.activity.segment",
+          "field": [{ "name": "activity", "format": "integer" }]
+        },
+        "application": { "packageName": "com.huami.watch.hmwatchmanager" },
+        "dataQualityStandard": []
+      },
+      {
+        "dataStreamId": "raw:com.google.activity.segment:com.huami.watch.hmwatchmanager:GoogleFitSyncHelper- steps segments16",
+        "dataStreamName": "GoogleFitSyncHelper- steps segments16",
+        "type": "raw",
+        "dataType": {
+          "name": "com.google.activity.segment",
+          "field": [{ "name": "activity", "format": "integer" }]
+        },
+        "application": { "packageName": "com.huami.watch.hmwatchmanager" },
+        "dataQualityStandard": []
+      },
+      {
+        "dataStreamId": "raw:com.google.activity.segment:com.huami.watch.hmwatchmanager:GoogleFitSyncHelper- steps segments17",
+        "dataStreamName": "GoogleFitSyncHelper- steps segments17",
+        "type": "raw",
+        "dataType": {
+          "name": "com.google.activity.segment",
+          "field": [{ "name": "activity", "format": "integer" }]
+        },
+        "application": { "packageName": "com.huami.watch.hmwatchmanager" },
+        "dataQualityStandard": []
+      },
+      {
+        "dataStreamId": "raw:com.google.activity.segment:com.huami.watch.hmwatchmanager:GoogleFitSyncHelper- steps segments18",
+        "dataStreamName": "GoogleFitSyncHelper- steps segments18",
+        "type": "raw",
+        "dataType": {
+          "name": "com.google.activity.segment",
+          "field": [{ "name": "activity", "format": "integer" }]
+        },
+        "application": { "packageName": "com.huami.watch.hmwatchmanager" },
+        "dataQualityStandard": []
+      },
+      {
+        "dataStreamId": "raw:com.google.activity.segment:com.huami.watch.hmwatchmanager:GoogleFitSyncHelper- steps segments19",
+        "dataStreamName": "GoogleFitSyncHelper- steps segments19",
+        "type": "raw",
+        "dataType": {
+          "name": "com.google.activity.segment",
+          "field": [{ "name": "activity", "format": "integer" }]
+        },
+        "application": { "packageName": "com.huami.watch.hmwatchmanager" },
+        "dataQualityStandard": []
+      },
+      {
+        "dataStreamId": "raw:com.google.activity.segment:com.huami.watch.hmwatchmanager:GoogleFitSyncHelper- steps segments2",
+        "dataStreamName": "GoogleFitSyncHelper- steps segments2",
+        "type": "raw",
+        "dataType": {
+          "name": "com.google.activity.segment",
+          "field": [{ "name": "activity", "format": "integer" }]
+        },
+        "application": { "packageName": "com.huami.watch.hmwatchmanager" },
+        "dataQualityStandard": []
+      },
+      {
+        "dataStreamId": "raw:com.google.activity.segment:com.huami.watch.hmwatchmanager:GoogleFitSyncHelper- steps segments3",
+        "dataStreamName": "GoogleFitSyncHelper- steps segments3",
+        "type": "raw",
+        "dataType": {
+          "name": "com.google.activity.segment",
+          "field": [{ "name": "activity", "format": "integer" }]
+        },
+        "application": { "packageName": "com.huami.watch.hmwatchmanager" },
+        "dataQualityStandard": []
+      },
+      {
+        "dataStreamId": "raw:com.google.activity.segment:com.huami.watch.hmwatchmanager:GoogleFitSyncHelper- steps segments4",
+        "dataStreamName": "GoogleFitSyncHelper- steps segments4",
+        "type": "raw",
+        "dataType": {
+          "name": "com.google.activity.segment",
+          "field": [{ "name": "activity", "format": "integer" }]
+        },
+        "application": { "packageName": "com.huami.watch.hmwatchmanager" },
+        "dataQualityStandard": []
+      },
+      {
+        "dataStreamId": "raw:com.google.activity.segment:com.huami.watch.hmwatchmanager:GoogleFitSyncHelper- steps segments5",
+        "dataStreamName": "GoogleFitSyncHelper- steps segments5",
+        "type": "raw",
+        "dataType": {
+          "name": "com.google.activity.segment",
+          "field": [{ "name": "activity", "format": "integer" }]
+        },
+        "application": { "packageName": "com.huami.watch.hmwatchmanager" },
+        "dataQualityStandard": []
+      },
+      {
+        "dataStreamId": "raw:com.google.activity.segment:com.huami.watch.hmwatchmanager:GoogleFitSyncHelper- steps segments6",
+        "dataStreamName": "GoogleFitSyncHelper- steps segments6",
+        "type": "raw",
+        "dataType": {
+          "name": "com.google.activity.segment",
+          "field": [{ "name": "activity", "format": "integer" }]
+        },
+        "application": { "packageName": "com.huami.watch.hmwatchmanager" },
+        "dataQualityStandard": []
+      },
+      {
+        "dataStreamId": "raw:com.google.activity.segment:com.huami.watch.hmwatchmanager:GoogleFitSyncHelper- steps segments7",
+        "dataStreamName": "GoogleFitSyncHelper- steps segments7",
+        "type": "raw",
+        "dataType": {
+          "name": "com.google.activity.segment",
+          "field": [{ "name": "activity", "format": "integer" }]
+        },
+        "application": { "packageName": "com.huami.watch.hmwatchmanager" },
+        "dataQualityStandard": []
+      },
+      {
+        "dataStreamId": "raw:com.google.activity.segment:com.huami.watch.hmwatchmanager:GoogleFitSyncHelper- steps segments8",
+        "dataStreamName": "GoogleFitSyncHelper- steps segments8",
+        "type": "raw",
+        "dataType": {
+          "name": "com.google.activity.segment",
+          "field": [{ "name": "activity", "format": "integer" }]
+        },
+        "application": { "packageName": "com.huami.watch.hmwatchmanager" },
+        "dataQualityStandard": []
+      },
+      {
+        "dataStreamId": "raw:com.google.activity.segment:com.huami.watch.hmwatchmanager:GoogleFitSyncHelper- steps segments9",
+        "dataStreamName": "GoogleFitSyncHelper- steps segments9",
+        "type": "raw",
+        "dataType": {
+          "name": "com.google.activity.segment",
+          "field": [{ "name": "activity", "format": "integer" }]
+        },
+        "application": { "packageName": "com.huami.watch.hmwatchmanager" },
+        "dataQualityStandard": []
+      },
+      {
+        "dataStreamId": "raw:com.google.calories.expended:com.google.android.apps.fitness:user_input",
+        "dataStreamName": "user_input",
+        "type": "raw",
+        "dataType": {
+          "name": "com.google.calories.expended",
+          "field": [{ "name": "calories", "format": "floatPoint" }]
+        },
+        "application": { "packageName": "com.google.android.apps.fitness" },
+        "dataQualityStandard": []
+      },
+      {
+        "dataStreamId": "raw:com.google.calories.expended:com.huami.watch.hmwatchmanager:GoogleFitSyncHelper- calories0",
+        "dataStreamName": "GoogleFitSyncHelper- calories0",
+        "type": "raw",
+        "dataType": {
+          "name": "com.google.calories.expended",
+          "field": [{ "name": "calories", "format": "floatPoint" }]
+        },
+        "application": { "packageName": "com.huami.watch.hmwatchmanager" },
+        "dataQualityStandard": []
+      },
+      {
+        "dataStreamId": "raw:com.google.calories.expended:com.huami.watch.hmwatchmanager:GoogleFitSyncHelper- calories1",
+        "dataStreamName": "GoogleFitSyncHelper- calories1",
+        "type": "raw",
+        "dataType": {
+          "name": "com.google.calories.expended",
+          "field": [{ "name": "calories", "format": "floatPoint" }]
+        },
+        "application": { "packageName": "com.huami.watch.hmwatchmanager" },
+        "dataQualityStandard": []
+      },
+      {
+        "dataStreamId": "raw:com.google.calories.expended:com.huami.watch.hmwatchmanager:GoogleFitSyncHelper- calories10",
+        "dataStreamName": "GoogleFitSyncHelper- calories10",
+        "type": "raw",
+        "dataType": {
+          "name": "com.google.calories.expended",
+          "field": [{ "name": "calories", "format": "floatPoint" }]
+        },
+        "application": { "packageName": "com.huami.watch.hmwatchmanager" },
+        "dataQualityStandard": []
+      },
+      {
+        "dataStreamId": "raw:com.google.calories.expended:com.huami.watch.hmwatchmanager:GoogleFitSyncHelper- calories11",
+        "dataStreamName": "GoogleFitSyncHelper- calories11",
+        "type": "raw",
+        "dataType": {
+          "name": "com.google.calories.expended",
+          "field": [{ "name": "calories", "format": "floatPoint" }]
+        },
+        "application": { "packageName": "com.huami.watch.hmwatchmanager" },
+        "dataQualityStandard": []
+      },
+      {
+        "dataStreamId": "raw:com.google.calories.expended:com.huami.watch.hmwatchmanager:GoogleFitSyncHelper- calories12",
+        "dataStreamName": "GoogleFitSyncHelper- calories12",
+        "type": "raw",
+        "dataType": {
+          "name": "com.google.calories.expended",
+          "field": [{ "name": "calories", "format": "floatPoint" }]
+        },
+        "application": { "packageName": "com.huami.watch.hmwatchmanager" },
+        "dataQualityStandard": []
+      },
+      {
+        "dataStreamId": "raw:com.google.calories.expended:com.huami.watch.hmwatchmanager:GoogleFitSyncHelper- calories13",
+        "dataStreamName": "GoogleFitSyncHelper- calories13",
+        "type": "raw",
+        "dataType": {
+          "name": "com.google.calories.expended",
+          "field": [{ "name": "calories", "format": "floatPoint" }]
+        },
+        "application": { "packageName": "com.huami.watch.hmwatchmanager" },
+        "dataQualityStandard": []
+      },
+      {
+        "dataStreamId": "raw:com.google.calories.expended:com.huami.watch.hmwatchmanager:GoogleFitSyncHelper- calories14",
+        "dataStreamName": "GoogleFitSyncHelper- calories14",
+        "type": "raw",
+        "dataType": {
+          "name": "com.google.calories.expended",
+          "field": [{ "name": "calories", "format": "floatPoint" }]
+        },
+        "application": { "packageName": "com.huami.watch.hmwatchmanager" },
+        "dataQualityStandard": []
+      },
+      {
+        "dataStreamId": "raw:com.google.calories.expended:com.huami.watch.hmwatchmanager:GoogleFitSyncHelper- calories15",
+        "dataStreamName": "GoogleFitSyncHelper- calories15",
+        "type": "raw",
+        "dataType": {
+          "name": "com.google.calories.expended",
+          "field": [{ "name": "calories", "format": "floatPoint" }]
+        },
+        "application": { "packageName": "com.huami.watch.hmwatchmanager" },
+        "dataQualityStandard": []
+      },
+      {
+        "dataStreamId": "raw:com.google.calories.expended:com.huami.watch.hmwatchmanager:GoogleFitSyncHelper- calories16",
+        "dataStreamName": "GoogleFitSyncHelper- calories16",
+        "type": "raw",
+        "dataType": {
+          "name": "com.google.calories.expended",
+          "field": [{ "name": "calories", "format": "floatPoint" }]
+        },
+        "application": { "packageName": "com.huami.watch.hmwatchmanager" },
+        "dataQualityStandard": []
+      },
+      {
+        "dataStreamId": "raw:com.google.calories.expended:com.huami.watch.hmwatchmanager:GoogleFitSyncHelper- calories17",
+        "dataStreamName": "GoogleFitSyncHelper- calories17",
+        "type": "raw",
+        "dataType": {
+          "name": "com.google.calories.expended",
+          "field": [{ "name": "calories", "format": "floatPoint" }]
+        },
+        "application": { "packageName": "com.huami.watch.hmwatchmanager" },
+        "dataQualityStandard": []
+      },
+      {
+        "dataStreamId": "raw:com.google.calories.expended:com.huami.watch.hmwatchmanager:GoogleFitSyncHelper- calories18",
+        "dataStreamName": "GoogleFitSyncHelper- calories18",
+        "type": "raw",
+        "dataType": {
+          "name": "com.google.calories.expended",
+          "field": [{ "name": "calories", "format": "floatPoint" }]
+        },
+        "application": { "packageName": "com.huami.watch.hmwatchmanager" },
+        "dataQualityStandard": []
+      },
+      {
+        "dataStreamId": "raw:com.google.calories.expended:com.huami.watch.hmwatchmanager:GoogleFitSyncHelper- calories19",
+        "dataStreamName": "GoogleFitSyncHelper- calories19",
+        "type": "raw",
+        "dataType": {
+          "name": "com.google.calories.expended",
+          "field": [{ "name": "calories", "format": "floatPoint" }]
+        },
+        "application": { "packageName": "com.huami.watch.hmwatchmanager" },
+        "dataQualityStandard": []
+      },
+      {
+        "dataStreamId": "raw:com.google.calories.expended:com.huami.watch.hmwatchmanager:GoogleFitSyncHelper- calories2",
+        "dataStreamName": "GoogleFitSyncHelper- calories2",
+        "type": "raw",
+        "dataType": {
+          "name": "com.google.calories.expended",
+          "field": [{ "name": "calories", "format": "floatPoint" }]
+        },
+        "application": { "packageName": "com.huami.watch.hmwatchmanager" },
+        "dataQualityStandard": []
+      },
+      {
+        "dataStreamId": "raw:com.google.calories.expended:com.huami.watch.hmwatchmanager:GoogleFitSyncHelper- calories3",
+        "dataStreamName": "GoogleFitSyncHelper- calories3",
+        "type": "raw",
+        "dataType": {
+          "name": "com.google.calories.expended",
+          "field": [{ "name": "calories", "format": "floatPoint" }]
+        },
+        "application": { "packageName": "com.huami.watch.hmwatchmanager" },
+        "dataQualityStandard": []
+      },
+      {
+        "dataStreamId": "raw:com.google.calories.expended:com.huami.watch.hmwatchmanager:GoogleFitSyncHelper- calories4",
+        "dataStreamName": "GoogleFitSyncHelper- calories4",
+        "type": "raw",
+        "dataType": {
+          "name": "com.google.calories.expended",
+          "field": [{ "name": "calories", "format": "floatPoint" }]
+        },
+        "application": { "packageName": "com.huami.watch.hmwatchmanager" },
+        "dataQualityStandard": []
+      },
+      {
+        "dataStreamId": "raw:com.google.calories.expended:com.huami.watch.hmwatchmanager:GoogleFitSyncHelper- calories5",
+        "dataStreamName": "GoogleFitSyncHelper- calories5",
+        "type": "raw",
+        "dataType": {
+          "name": "com.google.calories.expended",
+          "field": [{ "name": "calories", "format": "floatPoint" }]
+        },
+        "application": { "packageName": "com.huami.watch.hmwatchmanager" },
+        "dataQualityStandard": []
+      },
+      {
+        "dataStreamId": "raw:com.google.calories.expended:com.huami.watch.hmwatchmanager:GoogleFitSyncHelper- calories6",
+        "dataStreamName": "GoogleFitSyncHelper- calories6",
+        "type": "raw",
+        "dataType": {
+          "name": "com.google.calories.expended",
+          "field": [{ "name": "calories", "format": "floatPoint" }]
+        },
+        "application": { "packageName": "com.huami.watch.hmwatchmanager" },
+        "dataQualityStandard": []
+      },
+      {
+        "dataStreamId": "raw:com.google.calories.expended:com.huami.watch.hmwatchmanager:GoogleFitSyncHelper- calories7",
+        "dataStreamName": "GoogleFitSyncHelper- calories7",
+        "type": "raw",
+        "dataType": {
+          "name": "com.google.calories.expended",
+          "field": [{ "name": "calories", "format": "floatPoint" }]
+        },
+        "application": { "packageName": "com.huami.watch.hmwatchmanager" },
+        "dataQualityStandard": []
+      },
+      {
+        "dataStreamId": "raw:com.google.calories.expended:com.huami.watch.hmwatchmanager:GoogleFitSyncHelper- calories8",
+        "dataStreamName": "GoogleFitSyncHelper- calories8",
+        "type": "raw",
+        "dataType": {
+          "name": "com.google.calories.expended",
+          "field": [{ "name": "calories", "format": "floatPoint" }]
+        },
+        "application": { "packageName": "com.huami.watch.hmwatchmanager" },
+        "dataQualityStandard": []
+      },
+      {
+        "dataStreamId": "raw:com.google.calories.expended:com.huami.watch.hmwatchmanager:GoogleFitSyncHelper- calories9",
+        "dataStreamName": "GoogleFitSyncHelper- calories9",
+        "type": "raw",
+        "dataType": {
+          "name": "com.google.calories.expended",
+          "field": [{ "name": "calories", "format": "floatPoint" }]
+        },
+        "application": { "packageName": "com.huami.watch.hmwatchmanager" },
+        "dataQualityStandard": []
+      },
+      {
+        "dataStreamId": "raw:com.google.calories.expended:menloseweight.loseweightappformen.weightlossformen:",
+        "dataStreamName": "",
+        "type": "raw",
+        "dataType": {
+          "name": "com.google.calories.expended",
+          "field": [{ "name": "calories", "format": "floatPoint" }]
+        },
+        "application": {
+          "packageName": "menloseweight.loseweightappformen.weightlossformen"
+        },
+        "dataQualityStandard": []
+      },
+      {
+        "dataStreamId": "raw:com.google.distance.delta:com.google.android.apps.fitness:user_input",
+        "dataStreamName": "user_input",
+        "type": "raw",
+        "dataType": {
+          "name": "com.google.distance.delta",
+          "field": [{ "name": "distance", "format": "floatPoint" }]
+        },
+        "application": { "packageName": "com.google.android.apps.fitness" },
+        "dataQualityStandard": []
+      },
+      {
+        "dataStreamId": "raw:com.google.distance.delta:com.huami.watch.hmwatchmanager:GoogleFitSyncHelper- distance",
+        "dataStreamName": "GoogleFitSyncHelper- distance",
+        "type": "raw",
+        "dataType": {
+          "name": "com.google.distance.delta",
+          "field": [{ "name": "distance", "format": "floatPoint" }]
+        },
+        "application": { "packageName": "com.huami.watch.hmwatchmanager" },
+        "dataQualityStandard": []
+      },
+      {
+        "dataStreamId": "raw:com.google.distance.delta:com.huami.watch.hmwatchmanager:GoogleFitSyncHelper- distance0",
+        "dataStreamName": "GoogleFitSyncHelper- distance0",
+        "type": "raw",
+        "dataType": {
+          "name": "com.google.distance.delta",
+          "field": [{ "name": "distance", "format": "floatPoint" }]
+        },
+        "application": { "packageName": "com.huami.watch.hmwatchmanager" },
+        "dataQualityStandard": []
+      },
+      {
+        "dataStreamId": "raw:com.google.distance.delta:com.huami.watch.hmwatchmanager:GoogleFitSyncHelper- distance1",
+        "dataStreamName": "GoogleFitSyncHelper- distance1",
+        "type": "raw",
+        "dataType": {
+          "name": "com.google.distance.delta",
+          "field": [{ "name": "distance", "format": "floatPoint" }]
+        },
+        "application": { "packageName": "com.huami.watch.hmwatchmanager" },
+        "dataQualityStandard": []
+      },
+      {
+        "dataStreamId": "raw:com.google.distance.delta:com.huami.watch.hmwatchmanager:GoogleFitSyncHelper- distance10",
+        "dataStreamName": "GoogleFitSyncHelper- distance10",
+        "type": "raw",
+        "dataType": {
+          "name": "com.google.distance.delta",
+          "field": [{ "name": "distance", "format": "floatPoint" }]
+        },
+        "application": { "packageName": "com.huami.watch.hmwatchmanager" },
+        "dataQualityStandard": []
+      },
+      {
+        "dataStreamId": "raw:com.google.distance.delta:com.huami.watch.hmwatchmanager:GoogleFitSyncHelper- distance11",
+        "dataStreamName": "GoogleFitSyncHelper- distance11",
+        "type": "raw",
+        "dataType": {
+          "name": "com.google.distance.delta",
+          "field": [{ "name": "distance", "format": "floatPoint" }]
+        },
+        "application": { "packageName": "com.huami.watch.hmwatchmanager" },
+        "dataQualityStandard": []
+      },
+      {
+        "dataStreamId": "raw:com.google.distance.delta:com.huami.watch.hmwatchmanager:GoogleFitSyncHelper- distance12",
+        "dataStreamName": "GoogleFitSyncHelper- distance12",
+        "type": "raw",
+        "dataType": {
+          "name": "com.google.distance.delta",
+          "field": [{ "name": "distance", "format": "floatPoint" }]
+        },
+        "application": { "packageName": "com.huami.watch.hmwatchmanager" },
+        "dataQualityStandard": []
+      },
+      {
+        "dataStreamId": "raw:com.google.distance.delta:com.huami.watch.hmwatchmanager:GoogleFitSyncHelper- distance13",
+        "dataStreamName": "GoogleFitSyncHelper- distance13",
+        "type": "raw",
+        "dataType": {
+          "name": "com.google.distance.delta",
+          "field": [{ "name": "distance", "format": "floatPoint" }]
+        },
+        "application": { "packageName": "com.huami.watch.hmwatchmanager" },
+        "dataQualityStandard": []
+      },
+      {
+        "dataStreamId": "raw:com.google.distance.delta:com.huami.watch.hmwatchmanager:GoogleFitSyncHelper- distance14",
+        "dataStreamName": "GoogleFitSyncHelper- distance14",
+        "type": "raw",
+        "dataType": {
+          "name": "com.google.distance.delta",
+          "field": [{ "name": "distance", "format": "floatPoint" }]
+        },
+        "application": { "packageName": "com.huami.watch.hmwatchmanager" },
+        "dataQualityStandard": []
+      },
+      {
+        "dataStreamId": "raw:com.google.distance.delta:com.huami.watch.hmwatchmanager:GoogleFitSyncHelper- distance15",
+        "dataStreamName": "GoogleFitSyncHelper- distance15",
+        "type": "raw",
+        "dataType": {
+          "name": "com.google.distance.delta",
+          "field": [{ "name": "distance", "format": "floatPoint" }]
+        },
+        "application": { "packageName": "com.huami.watch.hmwatchmanager" },
+        "dataQualityStandard": []
+      },
+      {
+        "dataStreamId": "raw:com.google.distance.delta:com.huami.watch.hmwatchmanager:GoogleFitSyncHelper- distance16",
+        "dataStreamName": "GoogleFitSyncHelper- distance16",
+        "type": "raw",
+        "dataType": {
+          "name": "com.google.distance.delta",
+          "field": [{ "name": "distance", "format": "floatPoint" }]
+        },
+        "application": { "packageName": "com.huami.watch.hmwatchmanager" },
+        "dataQualityStandard": []
+      },
+      {
+        "dataStreamId": "raw:com.google.distance.delta:com.huami.watch.hmwatchmanager:GoogleFitSyncHelper- distance17",
+        "dataStreamName": "GoogleFitSyncHelper- distance17",
+        "type": "raw",
+        "dataType": {
+          "name": "com.google.distance.delta",
+          "field": [{ "name": "distance", "format": "floatPoint" }]
+        },
+        "application": { "packageName": "com.huami.watch.hmwatchmanager" },
+        "dataQualityStandard": []
+      },
+      {
+        "dataStreamId": "raw:com.google.distance.delta:com.huami.watch.hmwatchmanager:GoogleFitSyncHelper- distance18",
+        "dataStreamName": "GoogleFitSyncHelper- distance18",
+        "type": "raw",
+        "dataType": {
+          "name": "com.google.distance.delta",
+          "field": [{ "name": "distance", "format": "floatPoint" }]
+        },
+        "application": { "packageName": "com.huami.watch.hmwatchmanager" },
+        "dataQualityStandard": []
+      },
+      {
+        "dataStreamId": "raw:com.google.distance.delta:com.huami.watch.hmwatchmanager:GoogleFitSyncHelper- distance19",
+        "dataStreamName": "GoogleFitSyncHelper- distance19",
+        "type": "raw",
+        "dataType": {
+          "name": "com.google.distance.delta",
+          "field": [{ "name": "distance", "format": "floatPoint" }]
+        },
+        "application": { "packageName": "com.huami.watch.hmwatchmanager" },
+        "dataQualityStandard": []
+      },
+      {
+        "dataStreamId": "raw:com.google.distance.delta:com.huami.watch.hmwatchmanager:GoogleFitSyncHelper- distance2",
+        "dataStreamName": "GoogleFitSyncHelper- distance2",
+        "type": "raw",
+        "dataType": {
+          "name": "com.google.distance.delta",
+          "field": [{ "name": "distance", "format": "floatPoint" }]
+        },
+        "application": { "packageName": "com.huami.watch.hmwatchmanager" },
+        "dataQualityStandard": []
+      },
+      {
+        "dataStreamId": "raw:com.google.distance.delta:com.huami.watch.hmwatchmanager:GoogleFitSyncHelper- distance3",
+        "dataStreamName": "GoogleFitSyncHelper- distance3",
+        "type": "raw",
+        "dataType": {
+          "name": "com.google.distance.delta",
+          "field": [{ "name": "distance", "format": "floatPoint" }]
+        },
+        "application": { "packageName": "com.huami.watch.hmwatchmanager" },
+        "dataQualityStandard": []
+      },
+      {
+        "dataStreamId": "raw:com.google.distance.delta:com.huami.watch.hmwatchmanager:GoogleFitSyncHelper- distance4",
+        "dataStreamName": "GoogleFitSyncHelper- distance4",
+        "type": "raw",
+        "dataType": {
+          "name": "com.google.distance.delta",
+          "field": [{ "name": "distance", "format": "floatPoint" }]
+        },
+        "application": { "packageName": "com.huami.watch.hmwatchmanager" },
+        "dataQualityStandard": []
+      },
+      {
+        "dataStreamId": "raw:com.google.distance.delta:com.huami.watch.hmwatchmanager:GoogleFitSyncHelper- distance5",
+        "dataStreamName": "GoogleFitSyncHelper- distance5",
+        "type": "raw",
+        "dataType": {
+          "name": "com.google.distance.delta",
+          "field": [{ "name": "distance", "format": "floatPoint" }]
+        },
+        "application": { "packageName": "com.huami.watch.hmwatchmanager" },
+        "dataQualityStandard": []
+      },
+      {
+        "dataStreamId": "raw:com.google.distance.delta:com.huami.watch.hmwatchmanager:GoogleFitSyncHelper- distance6",
+        "dataStreamName": "GoogleFitSyncHelper- distance6",
+        "type": "raw",
+        "dataType": {
+          "name": "com.google.distance.delta",
+          "field": [{ "name": "distance", "format": "floatPoint" }]
+        },
+        "application": { "packageName": "com.huami.watch.hmwatchmanager" },
+        "dataQualityStandard": []
+      },
+      {
+        "dataStreamId": "raw:com.google.distance.delta:com.huami.watch.hmwatchmanager:GoogleFitSyncHelper- distance7",
+        "dataStreamName": "GoogleFitSyncHelper- distance7",
+        "type": "raw",
+        "dataType": {
+          "name": "com.google.distance.delta",
+          "field": [{ "name": "distance", "format": "floatPoint" }]
+        },
+        "application": { "packageName": "com.huami.watch.hmwatchmanager" },
+        "dataQualityStandard": []
+      },
+      {
+        "dataStreamId": "raw:com.google.distance.delta:com.huami.watch.hmwatchmanager:GoogleFitSyncHelper- distance8",
+        "dataStreamName": "GoogleFitSyncHelper- distance8",
+        "type": "raw",
+        "dataType": {
+          "name": "com.google.distance.delta",
+          "field": [{ "name": "distance", "format": "floatPoint" }]
+        },
+        "application": { "packageName": "com.huami.watch.hmwatchmanager" },
+        "dataQualityStandard": []
+      },
+      {
+        "dataStreamId": "raw:com.google.distance.delta:com.huami.watch.hmwatchmanager:GoogleFitSyncHelper- distance9",
+        "dataStreamName": "GoogleFitSyncHelper- distance9",
+        "type": "raw",
+        "dataType": {
+          "name": "com.google.distance.delta",
+          "field": [{ "name": "distance", "format": "floatPoint" }]
+        },
+        "application": { "packageName": "com.huami.watch.hmwatchmanager" },
+        "dataQualityStandard": []
+      },
+      {
+        "dataStreamId": "raw:com.google.heart_minutes:com.google.android.apps.fitness:user_input",
+        "dataStreamName": "user_input",
+        "type": "raw",
+        "dataType": {
+          "name": "com.google.heart_minutes",
+          "field": [{ "name": "intensity", "format": "floatPoint" }]
+        },
+        "application": { "packageName": "com.google.android.apps.fitness" },
+        "dataQualityStandard": []
+      },
+      {
+        "dataStreamId": "raw:com.google.step_count.cumulative:Xiaomi:Redmi Note 7:5833feed:Step Counter",
+        "dataStreamName": "Step Counter",
+        "type": "raw",
+        "dataType": {
+          "name": "com.google.step_count.cumulative",
+          "field": [{ "name": "steps", "format": "integer" }]
+        },
+        "device": {
+          "uid": "5833feed",
+          "type": "phone",
+          "version": "",
+          "model": "Redmi Note 7",
+          "manufacturer": "Xiaomi"
+        },
+        "dataQualityStandard": []
+      },
+      {
+        "dataStreamId": "raw:com.google.step_count.cumulative:Xiaomi:Redmi Note 7:5e2a8d75:Step Counter",
+        "dataStreamName": "Step Counter",
+        "type": "raw",
+        "dataType": {
+          "name": "com.google.step_count.cumulative",
+          "field": [{ "name": "steps", "format": "integer" }]
+        },
+        "device": {
+          "uid": "5e2a8d75",
+          "type": "phone",
+          "version": "",
+          "model": "Redmi Note 7",
+          "manufacturer": "Xiaomi"
+        },
+        "dataQualityStandard": []
+      },
+      {
+        "dataStreamId": "raw:com.google.step_count.cumulative:Xiaomi:Redmi Note 7:403d77b0:Step Counter",
+        "dataStreamName": "Step Counter",
+        "type": "raw",
+        "dataType": {
+          "name": "com.google.step_count.cumulative",
+          "field": [{ "name": "steps", "format": "integer" }]
+        },
+        "device": {
+          "uid": "403d77b0",
+          "type": "phone",
+          "version": "",
+          "model": "Redmi Note 7",
+          "manufacturer": "Xiaomi"
+        },
+        "dataQualityStandard": []
+      },
+      {
+        "dataStreamId": "raw:com.google.step_count.delta:com.google.android.apps.fitness:user_input",
+        "dataStreamName": "user_input",
+        "type": "raw",
+        "dataType": {
+          "name": "com.google.step_count.delta",
+          "field": [{ "name": "steps", "format": "integer" }]
+        },
+        "application": { "packageName": "com.google.android.apps.fitness" },
+        "dataQualityStandard": []
+      },
+      {
+        "dataStreamId": "raw:com.google.step_count.delta:com.huami.watch.hmwatchmanager:GoogleFitSyncHelper- steps",
+        "dataStreamName": "GoogleFitSyncHelper- steps",
+        "type": "raw",
+        "dataType": {
+          "name": "com.google.step_count.delta",
+          "field": [{ "name": "steps", "format": "integer" }]
+        },
+        "application": { "packageName": "com.huami.watch.hmwatchmanager" },
+        "dataQualityStandard": []
+      },
+      {
+        "dataStreamId": "raw:com.google.step_count.delta:com.huami.watch.hmwatchmanager:GoogleFitSyncHelper- steps0",
+        "dataStreamName": "GoogleFitSyncHelper- steps0",
+        "type": "raw",
+        "dataType": {
+          "name": "com.google.step_count.delta",
+          "field": [{ "name": "steps", "format": "integer" }]
+        },
+        "application": { "packageName": "com.huami.watch.hmwatchmanager" },
+        "dataQualityStandard": []
+      },
+      {
+        "dataStreamId": "raw:com.google.step_count.delta:com.huami.watch.hmwatchmanager:GoogleFitSyncHelper- steps1",
+        "dataStreamName": "GoogleFitSyncHelper- steps1",
+        "type": "raw",
+        "dataType": {
+          "name": "com.google.step_count.delta",
+          "field": [{ "name": "steps", "format": "integer" }]
+        },
+        "application": { "packageName": "com.huami.watch.hmwatchmanager" },
+        "dataQualityStandard": []
+      },
+      {
+        "dataStreamId": "raw:com.google.step_count.delta:com.huami.watch.hmwatchmanager:GoogleFitSyncHelper- steps10",
+        "dataStreamName": "GoogleFitSyncHelper- steps10",
+        "type": "raw",
+        "dataType": {
+          "name": "com.google.step_count.delta",
+          "field": [{ "name": "steps", "format": "integer" }]
+        },
+        "application": { "packageName": "com.huami.watch.hmwatchmanager" },
+        "dataQualityStandard": []
+      },
+      {
+        "dataStreamId": "raw:com.google.step_count.delta:com.huami.watch.hmwatchmanager:GoogleFitSyncHelper- steps11",
+        "dataStreamName": "GoogleFitSyncHelper- steps11",
+        "type": "raw",
+        "dataType": {
+          "name": "com.google.step_count.delta",
+          "field": [{ "name": "steps", "format": "integer" }]
+        },
+        "application": { "packageName": "com.huami.watch.hmwatchmanager" },
+        "dataQualityStandard": []
+      },
+      {
+        "dataStreamId": "raw:com.google.step_count.delta:com.huami.watch.hmwatchmanager:GoogleFitSyncHelper- steps12",
+        "dataStreamName": "GoogleFitSyncHelper- steps12",
+        "type": "raw",
+        "dataType": {
+          "name": "com.google.step_count.delta",
+          "field": [{ "name": "steps", "format": "integer" }]
+        },
+        "application": { "packageName": "com.huami.watch.hmwatchmanager" },
+        "dataQualityStandard": []
+      },
+      {
+        "dataStreamId": "raw:com.google.step_count.delta:com.huami.watch.hmwatchmanager:GoogleFitSyncHelper- steps13",
+        "dataStreamName": "GoogleFitSyncHelper- steps13",
+        "type": "raw",
+        "dataType": {
+          "name": "com.google.step_count.delta",
+          "field": [{ "name": "steps", "format": "integer" }]
+        },
+        "application": { "packageName": "com.huami.watch.hmwatchmanager" },
+        "dataQualityStandard": []
+      },
+      {
+        "dataStreamId": "raw:com.google.step_count.delta:com.huami.watch.hmwatchmanager:GoogleFitSyncHelper- steps14",
+        "dataStreamName": "GoogleFitSyncHelper- steps14",
+        "type": "raw",
+        "dataType": {
+          "name": "com.google.step_count.delta",
+          "field": [{ "name": "steps", "format": "integer" }]
+        },
+        "application": { "packageName": "com.huami.watch.hmwatchmanager" },
+        "dataQualityStandard": []
+      },
+      {
+        "dataStreamId": "raw:com.google.step_count.delta:com.huami.watch.hmwatchmanager:GoogleFitSyncHelper- steps15",
+        "dataStreamName": "GoogleFitSyncHelper- steps15",
+        "type": "raw",
+        "dataType": {
+          "name": "com.google.step_count.delta",
+          "field": [{ "name": "steps", "format": "integer" }]
+        },
+        "application": { "packageName": "com.huami.watch.hmwatchmanager" },
+        "dataQualityStandard": []
+      },
+      {
+        "dataStreamId": "raw:com.google.step_count.delta:com.huami.watch.hmwatchmanager:GoogleFitSyncHelper- steps16",
+        "dataStreamName": "GoogleFitSyncHelper- steps16",
+        "type": "raw",
+        "dataType": {
+          "name": "com.google.step_count.delta",
+          "field": [{ "name": "steps", "format": "integer" }]
+        },
+        "application": { "packageName": "com.huami.watch.hmwatchmanager" },
+        "dataQualityStandard": []
+      },
+      {
+        "dataStreamId": "raw:com.google.step_count.delta:com.huami.watch.hmwatchmanager:GoogleFitSyncHelper- steps17",
+        "dataStreamName": "GoogleFitSyncHelper- steps17",
+        "type": "raw",
+        "dataType": {
+          "name": "com.google.step_count.delta",
+          "field": [{ "name": "steps", "format": "integer" }]
+        },
+        "application": { "packageName": "com.huami.watch.hmwatchmanager" },
+        "dataQualityStandard": []
+      },
+      {
+        "dataStreamId": "raw:com.google.step_count.delta:com.huami.watch.hmwatchmanager:GoogleFitSyncHelper- steps18",
+        "dataStreamName": "GoogleFitSyncHelper- steps18",
+        "type": "raw",
+        "dataType": {
+          "name": "com.google.step_count.delta",
+          "field": [{ "name": "steps", "format": "integer" }]
+        },
+        "application": { "packageName": "com.huami.watch.hmwatchmanager" },
+        "dataQualityStandard": []
+      },
+      {
+        "dataStreamId": "raw:com.google.step_count.delta:com.huami.watch.hmwatchmanager:GoogleFitSyncHelper- steps19",
+        "dataStreamName": "GoogleFitSyncHelper- steps19",
+        "type": "raw",
+        "dataType": {
+          "name": "com.google.step_count.delta",
+          "field": [{ "name": "steps", "format": "integer" }]
+        },
+        "application": { "packageName": "com.huami.watch.hmwatchmanager" },
+        "dataQualityStandard": []
+      },
+      {
+        "dataStreamId": "raw:com.google.step_count.delta:com.huami.watch.hmwatchmanager:GoogleFitSyncHelper- steps2",
+        "dataStreamName": "GoogleFitSyncHelper- steps2",
+        "type": "raw",
+        "dataType": {
+          "name": "com.google.step_count.delta",
+          "field": [{ "name": "steps", "format": "integer" }]
+        },
+        "application": { "packageName": "com.huami.watch.hmwatchmanager" },
+        "dataQualityStandard": []
+      },
+      {
+        "dataStreamId": "raw:com.google.step_count.delta:com.huami.watch.hmwatchmanager:GoogleFitSyncHelper- steps3",
+        "dataStreamName": "GoogleFitSyncHelper- steps3",
+        "type": "raw",
+        "dataType": {
+          "name": "com.google.step_count.delta",
+          "field": [{ "name": "steps", "format": "integer" }]
+        },
+        "application": { "packageName": "com.huami.watch.hmwatchmanager" },
+        "dataQualityStandard": []
+      },
+      {
+        "dataStreamId": "raw:com.google.step_count.delta:com.huami.watch.hmwatchmanager:GoogleFitSyncHelper- steps4",
+        "dataStreamName": "GoogleFitSyncHelper- steps4",
+        "type": "raw",
+        "dataType": {
+          "name": "com.google.step_count.delta",
+          "field": [{ "name": "steps", "format": "integer" }]
+        },
+        "application": { "packageName": "com.huami.watch.hmwatchmanager" },
+        "dataQualityStandard": []
+      },
+      {
+        "dataStreamId": "raw:com.google.step_count.delta:com.huami.watch.hmwatchmanager:GoogleFitSyncHelper- steps5",
+        "dataStreamName": "GoogleFitSyncHelper- steps5",
+        "type": "raw",
+        "dataType": {
+          "name": "com.google.step_count.delta",
+          "field": [{ "name": "steps", "format": "integer" }]
+        },
+        "application": { "packageName": "com.huami.watch.hmwatchmanager" },
+        "dataQualityStandard": []
+      },
+      {
+        "dataStreamId": "raw:com.google.step_count.delta:com.huami.watch.hmwatchmanager:GoogleFitSyncHelper- steps6",
+        "dataStreamName": "GoogleFitSyncHelper- steps6",
+        "type": "raw",
+        "dataType": {
+          "name": "com.google.step_count.delta",
+          "field": [{ "name": "steps", "format": "integer" }]
+        },
+        "application": { "packageName": "com.huami.watch.hmwatchmanager" },
+        "dataQualityStandard": []
+      },
+      {
+        "dataStreamId": "raw:com.google.step_count.delta:com.huami.watch.hmwatchmanager:GoogleFitSyncHelper- steps7",
+        "dataStreamName": "GoogleFitSyncHelper- steps7",
+        "type": "raw",
+        "dataType": {
+          "name": "com.google.step_count.delta",
+          "field": [{ "name": "steps", "format": "integer" }]
+        },
+        "application": { "packageName": "com.huami.watch.hmwatchmanager" },
+        "dataQualityStandard": []
+      },
+      {
+        "dataStreamId": "raw:com.google.step_count.delta:com.huami.watch.hmwatchmanager:GoogleFitSyncHelper- steps8",
+        "dataStreamName": "GoogleFitSyncHelper- steps8",
+        "type": "raw",
+        "dataType": {
+          "name": "com.google.step_count.delta",
+          "field": [{ "name": "steps", "format": "integer" }]
+        },
+        "application": { "packageName": "com.huami.watch.hmwatchmanager" },
+        "dataQualityStandard": []
+      },
+      {
+        "dataStreamId": "raw:com.google.step_count.delta:com.huami.watch.hmwatchmanager:GoogleFitSyncHelper- steps9",
+        "dataStreamName": "GoogleFitSyncHelper- steps9",
+        "type": "raw",
+        "dataType": {
+          "name": "com.google.step_count.delta",
+          "field": [{ "name": "steps", "format": "integer" }]
+        },
+        "application": { "packageName": "com.huami.watch.hmwatchmanager" },
+        "dataQualityStandard": []
+      }
+    ]
+  },
+  "headers": {
+    "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+    "cache-control": "private",
+    "connection": "close",
+    "content-encoding": "gzip",
+    "content-type": "application/json; charset=UTF-8",
+    "date": "Fri, 07 Apr 2023 16:53:08 GMT",
+    "server": "ESF",
+    "transfer-encoding": "chunked",
+    "vary": "Origin, X-Origin, Referer",
+    "x-content-type-options": "nosniff",
+    "x-frame-options": "SAMEORIGIN",
+    "x-xss-protection": "0"
+  },
+  "status": 200,
+  "statusText": "OK",
+  "request": {
+    "responseURL": "https://fitness.googleapis.com/fitness/v1/users/me/dataSources"
+  }
+}
