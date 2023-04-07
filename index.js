@@ -202,11 +202,9 @@ app.get("/get2", isLoggedIn, async (req, res) => {
         userId: "me",
       });
 
-      return res.json(data);
-
       const ids = [];
       for (let dataId of data.data.dataSource) {
-        ids.push(dataId.dataStreamId);
+        ids.push(dataId.dataTypeName);
       }
       for (let i = 0; i < numRequests; i++) {
         const startTime = startTimeMillis + i * maxDuration;
@@ -230,28 +228,38 @@ app.get("/get2", isLoggedIn, async (req, res) => {
             //     bucketByActivityType: {},
             //   },
             // })),
-            aggregateBy: [
-              {
-                dataTypeName: "com.google.active_minutes",
-                aggregation: {
-                  aggregatedDataType: {
-                    fieldName: "com.google.active_minutes",
-                    type: "SUM",
-                  },
-                  bucketByActivitySegment: {},
+            //   {
+            //     dataTypeName: "com.google.active_minutes",
+            //     aggregation: {
+            //       aggregatedDataType: {
+            //         fieldName: "com.google.active_minutes",
+            //         type: "SUM",
+            //       },
+            //       bucketByActivitySegment: {},
+            //     },
+            //   },
+            //   {
+            //     dataTypeName: "com.google.cycling.pedaling.cadence",
+            //     aggregation: {
+            //       aggregatedDataType: {
+            //         fieldName: "com.google.cycling.pedaling.cadence",
+            //         type: "AVG",
+            //       },
+            //       bucketByActivitySegment: {},
+            //     },
+            //   },
+            // ],
+
+            aggregateBy: Array.from(new Set(ids)).map((dataType) => ({
+              dataTypeName: dataType,
+              aggregation: {
+                aggregatedDataType: {
+                  fieldName: dataType,
+                  type: getAggregationType()[dataType]
                 },
-              },
-              {
-                dataTypeName: "com.google.cycling.pedaling.cadence",
-                aggregation: {
-                  aggregatedDataType: {
-                    fieldName: "com.google.cycling.pedaling.cadence",
-                    type: "AVG",
-                  },
-                  bucketByActivitySegment: {},
-                },
-              },
-            ],
+                bucketByActivitySegment: {}
+              }
+            })),
             startTimeMillis: startTime,
             endTimeMillis: endTime,
             bucketByActivitySegment: {},
