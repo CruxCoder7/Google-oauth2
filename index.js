@@ -62,7 +62,7 @@ app.get("/auth/failure", (req, res) => {
     res.send('something went wrong')
 })
 
-let token = "ya29.a0Ael9sCN5fsgJwhxujincTDmElJH_QxouZDl6tz48BM3ffnjqEFcq9yMTC-_cPeCy1hCPVHaVWkiOXmoiXleacCTJbYUkyh0kdReR_Kb185PaOYiEub98EIHggv6vrhLgIG4o7xK2Zhj7-80UiWNtnKH6jNKraCgYKARMSARESFQF4udJh_pROYYhH40mRuKKr_UfVcQ0163"
+let token = "ya29.a0Ael9sCOqicDi3owYm5jvXzlsZkV1Mfrgv1R_gvt2kkF5XhNmXV1zE75Q1anNRsmgwPPhM8fQ4Rz9yG4bouQTbG-6lssFTp6e-rVxF9gKtjj7ELdvlMBdOVlZ0DIpWudjCgA9iNF-ZQzE2cTf6J4fEDdi7CdaWAaCgYKAU8SARESFQF4udJhbMz0PewExrJqkH2U_tBSpA0165"
 const stepStreamId = "derived:com.google.step_count.delta:407408718192:Example Manufacturer:ExampleTablet:1000001:MyDataSourceNew";
 const caloriesStreamId = "derived:com.google.calories.bmr.summary:407408718192:ExampleManufacturer:ExampleTablet:1000001:MyBodyTempSource";
 const caloriesBurntStreamId = "derived:com.google.calories.expended:407408718192:ExampleManufacturer:ExampleTablet:1000001:MyWorkoutSource";
