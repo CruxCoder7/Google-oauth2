@@ -83,21 +83,19 @@ app.get("/get2", isLoggedIn, async (req, res) => {
       "com.google.cycling.pedaling.cumulative",
       "com.google.power.sample",
       "com.google.activity.exercise",
-
       //   // location
       "com.google.cycling.wheel_revolution.rpm",
       "com.google.cycling.wheel_revolution.cumulative",
       "com.google.distance.delta",
       "com.google.location.sample",
       "com.google.speed",
-
       // summary
-      "com.google.activity.summary",
-      "com.google.calories.bmr.summary",
-      "com.google.heart_minutes.summary",
-      "com.google.power.summary",
-      "com.google.location.bounding_box",
-      "com.google.speed.summary",
+      //   "com.google.activity.summary",
+      //   "com.google.calories.bmr.summary",
+      //   "com.google.heart_minutes.summary",
+      //   "com.google.power.summary",
+      //   "com.google.location.bounding_box",
+      //   "com.google.speed.summary",
     ];
 
     //   {
@@ -130,6 +128,7 @@ app.get("/get2", isLoggedIn, async (req, res) => {
             })),
             startTimeMillis: startTime.toString(),
             endTimeMillis: endTime.toString(),
+            bucketByActivityType: {},
           },
         });
 
