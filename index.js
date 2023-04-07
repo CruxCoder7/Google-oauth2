@@ -1,7 +1,7 @@
 const express = require("express");
 const session = require("express-session");
 const passport = require("passport");
-const axios = require("axios");
+const _ = require("lodash");
 const { google } = require("googleapis");
 const { OAuth2 } = google.auth;
 
@@ -46,7 +46,7 @@ app.get(
 app.get(
   "/google/callback",
   passport.authenticate("google", {
-    successRedirect: "/get2",
+    successRedirect: "/data",
     failureRedirect: "/auth/failure",
   })
 );
@@ -55,55 +55,147 @@ app.get("/auth/failure", (req, res) => {
   res.send("something went wrong");
 });
 
-const getAggregationType = () => {
-  /**
-   * {
-   *    {
-          fieldName: "com.google.cycling.pedaling.cadence",
-          type: "AVG",
-        }
-   * }
-   */
-  /**
-   * // activity
-      "com.google.activity.segment": "NOT" SURE
-      "com.google.calories.bmr", -> SUM
-      "com.google.calories.expended", -> SUM
-      "com.google.active_minutes", -> SUM
-      "com.google.step_count.delta", -> SUM
-      "com.google.step_count.cadence", -> AVG
-      "com.google.cycling.pedaling.cadence", -> SUM
-      "com.google.cycling.pedaling.cumulative",  -> SUM
-      "com.google.power.sample",  -> SUM
-      "com.google.activity.exercise",  -> SUM
-      //   // location
-      "com.google.cycling.wheel_revolution.rpm", -> AVG
-      "com.google.cycling.wheel_revolution.cumulative",  -> SUM
-      "com.google.distance.delta", -> SUM
-      "com.google.location.sample", -> SUM
-      "com.google.speed",  -> AVG
-   */
-  return {
-    // "com.google.activity.segment": "NOT" SURE
-    "com.google.calories.bmr": "SUM",
-    "com.google.calories.expended": "SUM",
-    "com.google.active_minutes": "SUM",
-    "com.google.step_count.delta": "SUM",
-    "com.google.step_count.cadence": "AVG",
-    "com.google.cycling.pedaling.cadence": "SUM",
-    "com.google.cycling.pedaling.cumulative": "SUM",
-    "com.google.power.sample": "SUM",
-    "com.google.activity.exercise": "SUM",
-    //   // location
-    "com.google.cycling.wheel_revolution.rpm": "AVG",
-    "com.google.cycling.wheel_revolution.cumulative": "SUM",
-    "com.google.distance.delta": "SUM",
-    "com.google.location.sample": "SUM",
-    "com.google.speed": "AVG",
-  };
+const getFilteredData = (buckets) => {
+  const result = [];
+
+  for (const bucket of buckets) {
+    const dataset = []; // Array to store objects with "com.google.activity.summary" dataTypeName
+
+    // Loop through the dataset array
+    for (const data of bucket.dataset) {
+      // Check if "dataTypeName" is "com.google.activity.summary" in each point object
+      if (
+        data.point.length > 0 &&
+        data.point[0].value &&
+        data.point[0].value.length > 0 &&
+        data.point[0].dataTypeName === "com.google.activity.summary"
+      ) {
+        dataset.push({
+          dataTypeName: data.point[0].dataTypeName,
+          FIELD_ACTIVITY: data.point[0].value[0].intVal,
+          FIELD_DURATION: data.point[0].value[1].intVal,
+          FIELD_NUM_SEGMENTS: data.point[0].value[2].intVal,
+        }); // Add the object to the summaryObjects array
+      }
+      if (
+        data.point.length > 0 &&
+        data.point[0].value &&
+        data.point[0].value.length > 0 &&
+        data.point[0].dataTypeName === "com.google.heart_minutes.summary"
+      ) {
+        dataset.push({
+          dataTypeName: data.point[0].dataTypeName,
+          FIELD_INTENSITY: Number(
+            parseFloat(data.point[0].value[0].fpVal).toFixed(2)
+          ),
+          FIELD_DURATION: data.point[0].value[1].intVal,
+        }); // Add the object to the summaryObjects array
+      }
+      if (
+        data.point.length > 0 &&
+        data.point[0].value &&
+        data.point[0].value.length > 0 &&
+        data.point[0].dataTypeName === "com.google.calories.bmr.summary"
+      ) {
+        dataset.push({
+          dataTypeName: data.point[0].dataTypeName,
+          FIELD_AVERAGE: Number(
+            parseFloat(data.point[0].value[0].fpVal).toFixed(2)
+          ),
+          FIELD_MAX: Number(
+            parseFloat(data.point[0].value[1].fpVal).toFixed(2)
+          ),
+          FIELD_MIN: Number(
+            parseFloat(data.point[0].value[2].fpVal).toFixed(2)
+          ),
+        }); // Add the object to the summaryObjects array
+      }
+      if (
+        data.point.length > 0 &&
+        data.point[0].value &&
+        data.point[0].value.length > 0 &&
+        data.point[0].dataTypeName === "com.google.power.summary"
+      ) {
+        dataset.push({
+          dataTypeName: data.point[0].dataTypeName,
+          FIELD_AVERAGE: Number(
+            parseFloat(data.point[0].value[0].fpVal).toFixed(2)
+          ),
+          FIELD_MAX: Number(
+            parseFloat(data.point[0].value[1].fpVal).toFixed(2)
+          ),
+          FIELD_MIN: Number(
+            parseFloat(data.point[0].value[2].fpVal).toFixed(2)
+          ),
+        }); // Add the object to the summaryObjects array
+      }
+      if (
+        data.point.length > 0 &&
+        data.point[0].value &&
+        data.point[0].value.length > 0 &&
+        data.point[0].dataTypeName === "com.google.location.bounding_box"
+      ) {
+        dataset.push({
+          dataTypeName: data.point[0].dataTypeName,
+          FIELD_LOW_LATITUDE: Number(
+            parseFloat(data.point[0].value[0].fpVal).toFixed(2)
+          ),
+          FIELD_LOW_LONGITUDE: Number(
+            parseFloat(data.point[0].value[1].fpVal).toFixed(2)
+          ),
+          FIELD_HIGH_LATITUDE: Number(
+            parseFloat(data.point[0].value[2].fpVal).toFixed(2)
+          ),
+          FIELD_HIGH_LONGITUDE: Number(
+            parseFloat(data.point[0].value[3].fpVal).toFixed(2)
+          ),
+        }); // Add the object to the summaryObjects array
+      }
+      if (
+        data.point.length > 0 &&
+        data.point[0].value &&
+        data.point[0].value.length > 0 &&
+        data.point[0].dataTypeName === "com.google.speed.summary"
+      ) {
+        dataset.push({
+          dataTypeName: data.point[0].dataTypeName,
+          average: Number(parseFloat(data.point[0].value[0].fpVal).toFixed(2)),
+          max: Number(parseFloat(data.point[0].value[1].fpVal).toFixed(2)),
+          min: Number(parseFloat(data.point[0].value[1].fpVal).toFixed(2)),
+        }); // Add the object to the summaryObjects array
+      }
+      if (
+        data.point.length > 0 &&
+        data.point[0].value &&
+        data.point[0].value.length > 0 &&
+        data.point[0].dataTypeName === "com.google.calories.expended"
+      ) {
+        dataset.push({
+          dataTypeName: data.point[0].dataTypeName,
+          FIELD_CALORIES: Number(
+            parseFloat(data.point[0].value[0].fpVal).toFixed(2)
+          ),
+        }); // Add the object to the summaryObjects array
+      }
+    }
+
+    const grouped = _.groupBy(_.uniqWith(dataset, _.isEqual), "dataTypeName");
+
+    result.push({
+      activity: bucket.activity,
+      started_at: new Date(Number(bucket.startTimeMillis)).toISOString(),
+      completed_at: new Date(Number(bucket.endTimeMillis)).toISOString(),
+      dataset: Object.keys(grouped).reduce(
+        (prev, curr) => ({ ...prev, [curr]: grouped[curr][0] }),
+        {}
+      ),
+    });
+  }
+
+  return result;
 };
 
-app.get("/get2", isLoggedIn, async (req, res) => {
+app.get("/data", isLoggedIn, async (req, res) => {
   try {
     // Exchange the authorization code for an access token
     oauth2Client.setCredentials({
@@ -114,8 +206,8 @@ app.get("/get2", isLoggedIn, async (req, res) => {
     const fitness = google.fitness("v1");
 
     // Set the aggregation parameters
-    const startTimeMillis = new Date("2023-01-01T00:00:00Z").getTime(); // Replace with your desired start time
-    const endTimeMillis = new Date().getTime(); // Replace with your desired end time
+    const startTimeMillis = new Date("2019-07-10T00:00:00Z").getTime(); // Replace with your desired start time
+    const endTimeMillis = new Date("2019-10-31T00:00:00Z").getTime(); // Replace with your desired end time
     const timeRange = endTimeMillis - startTimeMillis; // Calculate the time range
     const maxDuration = 7 * 24 * 60 * 60 * 1000; // Maximum duration for aggregation is 7 days in milliseconds
     const numRequests = Math.ceil(timeRange / maxDuration); // Calculate the number of requests needed
@@ -146,119 +238,33 @@ app.get("/get2", isLoggedIn, async (req, res) => {
       "com.google.speed.summary",
     ];
 
-    /**
-     *
-     */
-
-    //   {
-    //     dataTypeName: "com.google.cycling.pedaling.cadence",
-    //     aggregation: {
-    //       aggregatedDataType: {
-    //         fieldName: "com.google.cycling.pedaling.cadence",
-    //         type: "SUM",
-    //       },
-    //       bucketByActivityType: {},
-    //     },
-    //   }
-
     let datasets = [];
 
     try {
-      // // Make multiple requests with smaller time ranges
-      // for (let i = 0; i < numRequests; i++) {
-      //     const startTime = startTimeMillis + i * maxDuration;
-      //     const endTime = Math.min(startTime + maxDuration, endTimeMillis);
-
-      //     // Call the aggregate method to get the aggregated dataset for the current time range
-      //     const response = await fitness.users.dataset.aggregate({
-      //         auth: oauth2Client,
-      //         userId: "me",
-      //         requestBody: {
-      //             aggregateBy: aggregationTypes.map((dataTypeName) => ({
-      //                 dataTypeName: dataTypeName,
-      //                 // dataSourceId: `derived:${dataTypeName}:com.google.android.gms:from_activities`,
-      //             })),
-      //             startTimeMillis: startTime.toString(),
-      //             endTimeMillis: endTime.toString(),
-      //             bucketByActivityType: {},
-      //         },
-      //     });
-
-      //     // Print the aggregated dataset
-      //     datasets = [...datasets, ...response.data.bucket];
-      //     //   console.log("Aggregated Dataset:");
-      //     //   datasets.forEach((dataset) => {
-      //     //     const startTime = new Date(
-      //     //       parseInt(dataset.startTimeMillis)
-      //     //     ).toISOString();
-      //     //     const endTime = new Date(parseInt(dataset.endTimeMillis)).toISOString();
-      //     //     console.log(`Start Time: ${startTime}`);
-      //     //     console.log(`End Time: ${endTime}`);
-      //     //     console.log(`Step Count: ${dataset.dataset[0].point[0].value.intVal}`);
-      //     //     console.log("---");
-      //     //   });
       const data = await fitness.users.dataSources.list({
         auth: oauth2Client,
         userId: "me",
       });
 
+      console.log(`Datasets - ${data.data.dataSource.length}`);
+
       const ids = [];
       for (let dataId of data.data.dataSource) {
-        ids.push(dataId.dataTypeName);
+        ids.push(dataId.dataStreamId);
       }
+
+      console.log(`Unique Datasets - ${new Set(data.data.dataSource).size}`);
+
       for (let i = 0; i < numRequests; i++) {
         const startTime = startTimeMillis + i * maxDuration;
         const endTime = Math.min(startTime + maxDuration, endTimeMillis);
-        console.log(
-          `Fetching from ${new Date(
-            startTime
-          ).toLocaleDateString()} to ${new Date(endTime)}`
-        );
+
         const aggData = await fitness.users.dataset.aggregate({
           auth: oauth2Client,
           userId: "me",
           requestBody: {
-            // aggregateBy: ids.map((dataSourceId) => ({
-            //   dataSourceId: dataSourceId,
-            //   aggregation: {
-            //     aggregatedDataType: {
-            //       fieldName: "com.google.calories.expended",
-            //       type: "SUM",
-            //     },
-            //     bucketByActivityType: {},
-            //   },
-            // })),
-            //   {
-            //     dataTypeName: "com.google.active_minutes",
-            //     aggregation: {
-            //       aggregatedDataType: {
-            //         fieldName: "com.google.active_minutes",
-            //         type: "SUM",
-            //       },
-            //       bucketByActivitySegment: {},
-            //     },
-            //   },
-            //   {
-            //     dataTypeName: "com.google.cycling.pedaling.cadence",
-            //     aggregation: {
-            //       aggregatedDataType: {
-            //         fieldName: "com.google.cycling.pedaling.cadence",
-            //         type: "AVG",
-            //       },
-            //       bucketByActivitySegment: {},
-            //     },
-            //   },
-            // ],
-
-            aggregateBy: Array.from(new Set(ids)).map((dataType) => ({
-              dataTypeName: dataType,
-              aggregation: {
-                aggregatedDataType: {
-                  fieldName: dataType,
-                  type: getAggregationType()[dataType]
-                },
-                bucketByActivitySegment: {}
-              }
+            aggregateBy: ids.map((dataSourceId) => ({
+              dataSourceId: dataSourceId,
             })),
             startTimeMillis: startTime,
             endTimeMillis: endTime,
@@ -266,7 +272,14 @@ app.get("/get2", isLoggedIn, async (req, res) => {
           },
         });
 
-        datasets = [...datasets, ...aggData.data.bucket];
+        console.log(
+          `Fetching from ${new Date(
+            startTime
+          ).toLocaleDateString()} to ${new Date(endTime)}`,
+          aggData.data.bucket.length
+        );
+
+        datasets = [...datasets, ...getFilteredData(aggData.data.bucket)];
       }
       res.json(datasets);
     } catch (e) {
@@ -275,73 +288,6 @@ app.get("/get2", isLoggedIn, async (req, res) => {
   } catch (error) {
     res.json({ error });
     console.error("Error:", error);
-  }
-});
-
-app.get("/getData", isLoggedIn, async (req, res) => {
-  try {
-    const result = await axios({
-      method: "POST",
-      headers: {
-        authorization: "Bearer " + req.user.token,
-      },
-      "Content-Type": "application/json",
-      url: `https://www.googleapis.com/fitness/v1/users/me/dataSources`,
-      data: {
-        dataStreamName: "MyStepSource3",
-        type: "derived",
-        application: {
-          detailsUrl: "http://example.com",
-          name: "Foo Example App",
-          version: "1",
-        },
-        dataType: {
-          field: [
-            {
-              name: "steps",
-              format: "integer",
-            },
-          ],
-          name: "com.google.step_count.delta",
-        },
-        device: {
-          manufacturer: req.user.displayName,
-          model: "New",
-          type: "tablet",
-          uid: "1000001",
-          version: "1.0",
-        },
-      },
-    });
-    const dataStreamId = result.data.dataStreamId;
-    try {
-      const result = await axios({
-        method: "POST",
-        headers: {
-          authorization: "Bearer " + req.user.token,
-        },
-        "Content-Type": "application/json",
-        url: "https://www.googleapis.com/fitness/v1/users/me/dataset:aggregate",
-        data: {
-          aggregateBy: [
-            {
-              dataSourceId: dataStreamId,
-            },
-          ],
-          bucketByTime: { durationMillis: 86400000 },
-          startTimeMillis: 1454284800000,
-          endTimeMillis: 1455062400000,
-        },
-      });
-      const stepArray = result.data.bucket;
-      res.json({ data: stepArray });
-    } catch (error) {
-      console.log(error);
-      res.send("errorrrrr");
-    }
-  } catch (error) {
-    console.log(error);
-    res.send("error");
   }
 });
 
