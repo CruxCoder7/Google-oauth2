@@ -13,6 +13,7 @@ passport.use(new GoogleStrategy({
 },
     function (request, accessToken, refreshToken, profile, done) {
         profile.token = accessToken;
+        console.log(accessToken);
         return done(null, profile, accessToken, refreshToken)
     }
 ))

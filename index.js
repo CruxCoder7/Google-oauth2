@@ -62,9 +62,8 @@ app.get("/auth/failure", (req, res) => {
     res.send('something went wrong')
 })
 
-let token = "ya29.a0Ael9sCOtY95H_AtKYhgWf5IemIDg1MmLNU9A_51pNGnfu0JbncMHC-YuNZh3lc6Rgkv36NE6NbXccPiYSrLnTjeMOFAVuGY_oAVrhkxzUajxQdZcd4hLq6X6O_C2BrJi92A6l-8pqL9iolwuXdUt0p5JL48raCgYKAe0SARESFQF4udJhgTP6EWy3vo1rUUh4lG-vQQ0163"
+let token = "ya29.a0Ael9sCN5fsgJwhxujincTDmElJH_QxouZDl6tz48BM3ffnjqEFcq9yMTC-_cPeCy1hCPVHaVWkiOXmoiXleacCTJbYUkyh0kdReR_Kb185PaOYiEub98EIHggv6vrhLgIG4o7xK2Zhj7-80UiWNtnKH6jNKraCgYKARMSARESFQF4udJh_pROYYhH40mRuKKr_UfVcQ0163"
 const stepStreamId = "derived:com.google.step_count.delta:407408718192:Example Manufacturer:ExampleTablet:1000001:MyDataSourceNew";
-const speedStreamId = "derived:com.google.speed.summary:407408718192:ExampleManufacturer:ExampleTablet:1000001:MyBodyTempSource";
 const caloriesStreamId = "derived:com.google.calories.bmr.summary:407408718192:ExampleManufacturer:ExampleTablet:1000001:MyBodyTempSource";
 const caloriesBurntStreamId = "derived:com.google.calories.expended:407408718192:ExampleManufacturer:ExampleTablet:1000001:MyWorkoutSource";
 const cyclingCadence = "derived:com.google.cycling.pedaling.cadence:407408718192:ExampleManufacturer:ExampleTablet:1000001:MyWorkoutSource";
@@ -91,38 +90,14 @@ app.get("/step", isLoggedIn, async (req, res) => {
             }
         })
         const stepArray = result.data.bucket;
-        res.json({ data: stepArray, url: "http://localhost:3000/speed" });
-    } catch (error) {
-        console.log(error);
-        res.send("error");
-    }
-})
-
-app.get("/speed", isLoggedIn, async (req, res) => {
-    try {
-        const result = await axios({
-            method: "POST",
-            headers: {
-                authorization: "Bearer " + token
-            },
-            "Content-Type": "application/json",
-            url: "https://www.googleapis.com/fitness/v1/users/me/dataset:aggregate",
-            data: {
-                "aggregateBy": [{
-                    "dataSourceId": speedStreamId
-                }],
-                "bucketByTime": { "durationMillis": 86400000 },
-                "startTimeMillis": 1454284800000,
-                "endTimeMillis": 1455062400000
-            }
-        })
-        const stepArray = result.data.bucket;
         res.json({ data: stepArray, url: "http://localhost:3000/cals" });
     } catch (error) {
         console.log(error);
         res.send("error");
     }
 })
+
+
 
 app.get("/cals", isLoggedIn, async (req, res) => {
     try {
