@@ -61,6 +61,9 @@ const getFilteredData = (buckets) => {
   for (const bucket of buckets) {
     const dataset = []; // Array to store objects with "com.google.activity.summary" dataTypeName
 
+    let started_at = new Date(Number(bucket.startTimeMillis));
+    let completed_at = new Date(Number(bucket.endTimeMillis));
+
     // Loop through the dataset array
     for (const data of bucket.dataset) {
       // Check if "dataTypeName" is "com.google.activity.summary" in each point object
@@ -71,10 +74,16 @@ const getFilteredData = (buckets) => {
         data.point[0].dataTypeName === "com.google.activity.summary"
       ) {
         dataset.push({
+          started_at: new Date(
+            Number(data.point[0].startTimeNanos) / 1e6
+          ).toISOString(),
+          completed_at: new Date(
+            Number(data.point[0].endTimeNanos) / 1e6
+          ).toISOString(),
           dataTypeName: data.point[0].dataTypeName,
-          FIELD_ACTIVITY: data.point[0].value[0].intVal,
-          FIELD_DURATION: data.point[0].value[1].intVal,
-          FIELD_NUM_SEGMENTS: data.point[0].value[2].intVal,
+          activity: data.point[0].value[0].intVal,
+          duration: Number(parseInt(data.point[0].value[1].intVal / 1e3)),
+          num_segments: data.point[0].value[2].intVal,
         }); // Add the object to the summaryObjects array
       }
       if (
@@ -85,10 +94,9 @@ const getFilteredData = (buckets) => {
       ) {
         dataset.push({
           dataTypeName: data.point[0].dataTypeName,
-          FIELD_INTENSITY: Number(
+          intensity: Number(
             parseFloat(data.point[0].value[0].fpVal).toFixed(2)
           ),
-          FIELD_DURATION: data.point[0].value[1].intVal,
         }); // Add the object to the summaryObjects array
       }
       if (
@@ -172,9 +180,70 @@ const getFilteredData = (buckets) => {
       ) {
         dataset.push({
           dataTypeName: data.point[0].dataTypeName,
-          FIELD_CALORIES: Number(
-            parseFloat(data.point[0].value[0].fpVal).toFixed(2)
-          ),
+          calories: Number(parseFloat(data.point[0].value[0].fpVal).toFixed(2)),
+        }); // Add the object to the summaryObjects array
+      }
+      if (
+        data.point.length > 0 &&
+        data.point[0].value &&
+        data.point[0].value.length > 0 &&
+        data.point[0].dataTypeName === "com.google.step_count.delta"
+      ) {
+        dataset.push({
+          dataTypeName: data.point[0].dataTypeName,
+          steps: data.point[0].value[0].intVal,
+        }); // Add the object to the summaryObjects array
+      }
+      if (
+        data.point.length > 0 &&
+        data.point[0].value &&
+        data.point[0].value.length > 0 &&
+        data.point[0].dataTypeName === "com.google.step_count.cadence"
+      ) {
+        dataset.push({
+          dataTypeName: data.point[0].dataTypeName,
+          rpm: Number(parseFloat(data.point[0].value[0].fpVal).toFixed(2)),
+        }); // Add the object to the summaryObjects array
+      }
+      if (
+        data.point.length > 0 &&
+        data.point[0].value &&
+        data.point[0].value.length > 0 &&
+        data.point[0].dataTypeName === "com.google.cycling.pedaling.cadence"
+      ) {
+        dataset.push({
+          dataTypeName: data.point[0].dataTypeName,
+          rpm: Number(parseFloat(data.point[0].value[0].fpVal).toFixed(2)),
+        }); // Add the object to the summaryObjects array
+      }
+      if (
+        data.point.length > 0 &&
+        data.point[0].value &&
+        data.point[0].value.length > 0 &&
+        data.point[0].dataTypeName === "com.google.cycling.pedaling.cumulative"
+      ) {
+        dataset.push({
+          dataTypeName: data.point[0].dataTypeName,
+          revolutions: data.point[0].value[0].intVal,
+        }); // Add the object to the summaryObjects array
+      }
+      if (
+        data.point.length > 0 &&
+        data.point[0].value &&
+        data.point[0].value.length > 0 &&
+        data.point[0].dataTypeName === "com.google.active_minutes"
+      ) {
+        started_at = new Date(Number(data.point[0].startTimeNanos) / 1e6);
+        completed_at = new Date(Number(data.point[0].endTimeNanos) / 1e6);
+        dataset.push({
+          started_at: new Date(
+            Number(data.point[0].startTimeNanos) / 1e6
+          ).toISOString(),
+          completed_at: new Date(
+            Number(data.point[0].endTimeNanos) / 1e6
+          ).toISOString(),
+          dataTypeName: data.point[0].dataTypeName,
+          duration: data.point[0].value[0].intVal,
         }); // Add the object to the summaryObjects array
       }
     }
@@ -183,8 +252,11 @@ const getFilteredData = (buckets) => {
 
     result.push({
       activity: bucket.activity,
-      started_at: new Date(Number(bucket.startTimeMillis)).toISOString(),
-      completed_at: new Date(Number(bucket.endTimeMillis)).toISOString(),
+      started_at: started_at.toISOString(),
+      completed_at: completed_at.toISOString(),
+      duration: Number(
+        parseInt((completed_at.getTime() - started_at.getTime()) / 1000)
+      ),
       dataset: Object.keys(grouped).reduce(
         (prev, curr) => ({ ...prev, [curr]: grouped[curr][0] }),
         {}
@@ -206,7 +278,7 @@ app.get("/data", isLoggedIn, async (req, res) => {
     const fitness = google.fitness("v1");
 
     // Set the aggregation parameters
-    const startTimeMillis = new Date("2019-07-10T00:00:00Z").getTime(); // Replace with your desired start time
+    const startTimeMillis = new Date("2019-10-01T00:00:00Z").getTime(); // Replace with your desired start time
     const endTimeMillis = new Date("2019-10-31T00:00:00Z").getTime(); // Replace with your desired end time
     const timeRange = endTimeMillis - startTimeMillis; // Calculate the time range
     const maxDuration = 7 * 24 * 60 * 60 * 1000; // Maximum duration for aggregation is 7 days in milliseconds
