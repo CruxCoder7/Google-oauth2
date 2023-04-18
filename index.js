@@ -53,7 +53,7 @@ app.get(
 app.get(
   "/google/callback",
   passport.authenticate("google", {
-    successRedirect: "/data",
+    successRedirect: "/sessions",
     failureRedirect: "/auth/failure",
   })
 );
@@ -369,6 +369,28 @@ app.get("/data", isLoggedIn, async (req, res) => {
     console.error("Error:", error);
   }
 });
+
+app.get("/sessions", isLoggedIn, async (req, res) => {
+  oauth2Client.setCredentials({
+    access_token: req.user.token,
+  });
+
+  // Create a Google Fitness API client
+  const fitness = google.fitness("v1");
+  try {
+    const data = await fitness.users.sessions.list({
+      auth: oauth2Client,
+      userId: "me",
+      startTime: "2023-04-11T13:03:28+05:30",
+      endTime: "2023-04-12T13:03:28+05:30",
+    })
+    res.json(data);
+  } catch (error) {
+    console.log(error);
+    res.send("Sdgsdg");
+  }
+
+})
 
 app.get("/logout", (req, res) => {
   req.logout(() => {
